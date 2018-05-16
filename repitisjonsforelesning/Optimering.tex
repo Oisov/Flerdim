@@ -1,0 +1,55 @@
+\begin{frame}
+  \begin{tikzpicture}
+    \begin{axis}[ xbar=0pt, /pgf/bar shift=0pt, legend style={ legend columns=4,
+        at={(xticklabel cs:0.5)}, anchor=north, draw=none }, ytick={0,...,15},
+      ytick style={draw=none},% <- added
+      axis y line*=none, axis x line*=bottom, tick label
+      style={font=\footnotesize}, legend style={font=\footnotesize}, label
+      style={font=\footnotesize}, xtick style={draw=none},% <- added
+      xtick={0,1,...,12}, width=.9\textwidth, bar width=3mm, y dir = reverse,
+      xmin=0, xmax=13, area legend,
+      y=5mm, enlarge y limits={abs=0.625},
+      style={text=black}, every axis plot/.append style={fill},
+      nodes near coords, nodes near coords,
+      yticklabels={%
+        {\topicref{Grenseverdier}},
+        {\topicref{Gradient}},
+        {\topicref{Epsilon-delta}},
+        {\topicref{Kjerneregelen}},
+        {\topicref{Taylor-approksimasjon}},
+        {\topicref{Tangenter}},
+        {\topicref{Kritiske-punkter}},
+        {\topicref{Optimering}},
+        {\topicref{Linjeintegral}},
+        {\topicref{Konservative-vektorfelt}},
+        {\topicref{Dobbelintegraler}},
+        {\topicref{Integrasjonsrekkefolge}},
+        {\topicref{Trippelintegral}},
+        {\topicref{Greens-teorem}},
+        {\topicref{Divergensteoremet}},
+        {\topicref{Stokes-teorem}}}]
+      \addplot[fill=black] coordinates {(8,0)};
+      \addplot[fill=black] coordinates {(4,1)};
+      \addplot[fill=black] coordinates {(1,2)};
+      \addplot[fill=black] coordinates {(7,3)};
+      \addplot[fill=black] coordinates {(1,4)};
+      \addplot[fill=black] coordinates {(7,5)};
+      \addplot[fill=black] coordinates {(11,6)};
+      \addplot[fill=red] coordinates {(4,7)};
+      \addplot[fill=black] coordinates {(3,8)};
+      \addplot[fill=black] coordinates {(8,9)};
+      \addplot[fill=black] coordinates {(7,10)};
+      \addplot[fill=black] coordinates {(3,11)};
+      \addplot[fill=black] coordinates {(4,12)};
+      \addplot[fill=black] coordinates {(4,13)};
+      \addplot[fill=black] coordinates {(8,14)};
+      \addplot[fill=black] coordinates {(6,15)};
+    \end{axis}
+  \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \subsection{Optimering}\label{subsec:Optimering}
+  \frametitle{Optimering}
+  Some more text here
+\end{frame}

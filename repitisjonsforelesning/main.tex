@@ -1,0 +1,225 @@
+\documentclass[screen, aspectratio=43, serif]{beamer}
+
+%\includeonlyframes{current}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% Use the NTNU-temaet for beamer 
+% \usetheme[style=ntnu|simple|vertical|horizontal, language=bm|nn|en]{ntnu2015}
+
+\usetheme[language=norsk]{Boadilla}
+\setbeamertemplate{frametitle}{\centerline{\bfseries\insertframetitle}}
+% \setbeamertemplate{frametitle}[default][center]
+
+\newenvironment<>{intuisjon}{%
+  \setbeamercolor{block title}{fg=black,bg=yellow!75!black}%
+  \begin{block}{Intuisjon}}{\end{block}}
+
+\newenvironment<>{oppgave}[1]{%
+  \setbeamercolor{block title}{fg=black,bg=green!60!black}%
+  \begin{block}#2{#1}}{\end{block}}
+
+
+% ===================================
+% Mathematics
+% ===================================
+    \usepackage{amsmath, amssymb, amsthm, mathtools}   % Mijøer og verktøy for å
+    % skrive matematikk
+    \usepackage{esdiff, esint}
+    
+\let\div\relax
+\DeclareMathOperator{\div}{div}
+\DeclareMathOperator{\curl}{curl}
+    
+
+    \DeclareMathOperator{\2d-curl}{2d-curl}
+    \DeclareMathOperator{\grad}{grad}
+
+    \newcommand{\vek}[1]{\mathbf{#1}}
+    \newcommand{\unitvek}[1]{\vek{\hat{#1}}}
+    \newcommand{\normal}{\mathbf{n}}
+
+    \usepackage[scr]{rsfso}
+    \newcommand{\La}{\mathscr{L}}
+    
+    \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+    \DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+    \makeatletter
+    \newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+    \newcommand*{\dd}{\mathop{}\!{\operator@font d}}
+    \makeatother
+    
+    \newcommand{\F}{\vek{F}}
+    \newcommand{\rr}{\vek{r}}
+    \newcommand{\R}{\mathbb{R}}
+    \newcommand{\N}{\mathbb{N}}
+    
+    \newcommand{\I}{\vek{i}}
+    \newcommand{\J}{\vek{j}}
+    \newcommand{\K}{\vek{k}}
+    \newcommand{\X}{\vek{x}}
+    \newcommand{\Y}{\vek{y}}
+    \newcommand{\A}{\vek{a}}
+    \newcommand{\B}{\vek{b}}
+    
+    \newcommand{\dt}{\mathop{}\! \mathrm{d} t\mathop{}\! }
+    \newcommand{\dT}{\mathop{}\! \mathrm{d} \theta\mathop{}\! }
+    \newcommand{\du}{\mathop{}\! \mathrm{d} u\mathop{}\! }
+    \newcommand{\dv}{\mathop{}\! \mathrm{d} v\mathop{}\! }
+    \newcommand{\ds}{\mathop{}\! \mathrm{d} s\mathop{}\! }
+    \newcommand{\dx}{\mathop{}\! \mathrm{d} x\mathop{}\! }
+    \newcommand{\dy}{\mathop{}\! \mathrm{d} y\mathop{}\! }
+    \newcommand{\dz}{\mathop{}\! \mathrm{d} z\mathop{}\! }
+    \newcommand{\dr}{\mathop{}\! \mathrm{d} \vek{r}\mathop{}\! }
+    \newcommand{\dA}{\mathop{}\! \mathrm{d} A\mathop{}\! }
+    \newcommand{\dV}{\mathop{}\! \mathrm{d} V\mathop{}\! }
+    \newcommand{\dS}{\mathop{}\! \mathrm{d} S\mathop{}\! }
+    \newcommand{\dSS}{\mathop{}\! \mathrm{d} \vek{S}\mathop{}\! }
+
+
+\usepackage{graphicx}
+\usepackage{lmodern}% http://ctan.org/pkg/lm
+% \usepackage{enumitem}
+
+\usepackage{refcount}
+
+\newcounter{saveenumi}
+\newcommand{\saveenumerate}{%
+  \stepcounter{saveenumi}%
+  \label{saveenumi-\thesaveenumi}}
+\newcommand{\restoreenumerate}{%
+  \setcounterref{enumi}{saveenumi-\thesaveenumi}}
+
+
+\usepackage{nameref}
+\newcommand{\topicref}[1]{\hyperlink{subsec:#1}{\nameref{subsec:#1}}}
+
+\usepackage{xcolor}
+
+\setbeamerfont{caption}{size=\footnotesize}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par\centering}
+
+ \usepackage{pgfplots,tikz}
+
+\usetikzlibrary{shapes.geometric, arrows}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum
+height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{starting} = [trapezium, trapezium left angle=70, trapezium right
+angle=110, rounded corners, minimum width=1cm, minimum
+height=1cm,text centered, draw=black, fill=blue!40]
+\tikzstyle{io} = [trapezium,
+trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum
+height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} =
+[rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black,
+fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum
+height=1cm, text centered, draw=black, fill=green!30]
+
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {$#1$};}}
+
+\title[s.ntnu.no/MA1103]{Flerdimhistorien på 90 minutter}
+\subtitle{s.ntnu.no/MA1103}
+\author[Ø. Søvik]{Øistein Søvik}
+
+\date{Mai 2018}
+%\date{} % To have an empty date
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}\centerline{
+  \begin{tikzpicture}[scale=0.75]
+    \begin{axis}[ xbar=0pt, /pgf/bar shift=0pt, legend style={ legend columns=4,
+        at={(xticklabel cs:0.5)}, anchor=north, draw=none }, ytick={0,...,15},
+      ytick style={draw=none},% <- added
+      axis y line*=none, axis x line*=bottom, tick label
+      style={font=\footnotesize}, legend style={font=\footnotesize}, label
+      style={font=\footnotesize}, xtick style={draw=none},% <- added
+      xtick={0,1,...,12}, width=.9\textwidth, bar width=3mm, y dir = reverse,
+      xmin=0, xmax=13, area legend,
+      y=5mm, enlarge y limits={abs=0.625},
+      style={text=black}, every axis plot/.append style={fill},
+      nodes near coords, nodes near coords,
+      yticklabels={%
+        {\topicref{Grenseverdier}},
+        {\topicref{Gradient}},
+        {\topicref{Epsilon-delta}},
+        {\topicref{Kjerneregelen}},
+        {\topicref{Taylor-approksimasjon}},
+        {\topicref{Tangenter}},
+        {\topicref{Kritiske-punkter}},
+        {\topicref{Optimering}},
+        {\topicref{Linjeintegral}},
+        {\topicref{Konservative-vektorfelt}},
+        {\topicref{Dobbelintegraler}},
+        {\topicref{Integrasjonsrekkefolge}},
+        {\topicref{Trippelintegral}},
+        {\topicref{Greens-teorem}},
+        {\topicref{Divergensteoremet}},
+        {\topicref{Stokes-teorem}}}]
+      \addplot[fill=red] coordinates {(8,0)};
+      \addplot[fill=black] coordinates {(4,1)};
+      \addplot[fill=black] coordinates {(1,2)};
+      \addplot[fill=black] coordinates {(7,3)};
+      \addplot[fill=black] coordinates {(1,4)};
+      \addplot[fill=black] coordinates {(7,5)};
+      \addplot[fill=black] coordinates {(11,6)};
+      \addplot[fill=black] coordinates {(4,7)};
+      \addplot[fill=black] coordinates {(3,8)};
+      \addplot[fill=black] coordinates {(8,9)};
+      \addplot[fill=black] coordinates {(7,10)};
+      \addplot[fill=black] coordinates {(3,11)};
+      \addplot[fill=black] coordinates {(4,12)};
+      \addplot[fill=black] coordinates {(4,13)};
+      \addplot[fill=black] coordinates {(8,14)};
+      \addplot[fill=black] coordinates {(6,15)};
+    \end{axis}
+  \end{tikzpicture}}
+  
+  \textbf{Plan:}
+  \begin{enumerate}
+    \item Før pausen: Derivasjon 7 temaer
+    \item Etter pausen: Integrasjon 7 temaer
+    \item Hvert tema har inneholder introduksjon/intuisjon, oppgaveløsning.
+  \end{enumerate}
+\end{frame}
+
+% \input{Introduksjon.tex}
+
+% 14/20 Done
+
+% Derivasjon
+\input{Derivasjon.tex}              % Done
+% \input{Grenseverdier.tex}           % Done 
+% \input{Gradient.tex} 
+% \input{Epsilon-Delta.tex}           % Done
+\input{Div-og-curl.tex}             % Done 
+% \input{Kjerneregelen.tex}           % Done
+% \input{Taylor-approksimasjon.tex}   % Done
+% \input{Tangenter.tex}               % Done
+% \input{Kritiske-punkter.tex}        % Done
+% \input{Optimering.tex}
+
+% Integrasjon
+\input{Integrasjon.tex}             % Done 
+% \input{Linjeintegral.tex}           % Done 
+% \input{Konservative-vektorfelt.tex} % Done 
+% \input{Dobbelintegraler.tex}        % Done 
+% \input{Integrasjonsrekkefolge.tex}  % Done  
+% \input{Trippelintegral.tex}
+% \input{Greens-teorem.tex}           % Done
+% \input{Overflateintegral.tex}       % Done
+% \input{Divergensteoremet.tex}
+% \input{Stokes-teorem.tex}
+
+\end{document}

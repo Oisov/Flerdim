@@ -1,0 +1,139 @@
+
+\seksjon{Grenseverdier}
+  
+\oppgave[V2017, Oppgave 1] La
+%
+\begin{equation*}
+  f(x, y) :=
+  \begin{cases}
+    \cfrac{xy^2}{x^2 + y^2}, & \text{når} \quad (x,y) \neq (0,0) \\
+    0, & \text{når} \quad (x,y) = (0,0)
+  \end{cases}
+\end{equation*}
+
+\begin{enumerate}
+  \item Vis at
+    \begin{enumerate}
+      \item $f$ er kontinuerlig i $(x,y) = (0,0)$,
+      \item $\diffp{f}{x}(0,0)$ og $\diffp{f}{y}(0,0)$ eksisterer, men $f$ er
+        ikke deriverbar i $(0,0)$.
+    \end{enumerate}
+    % 
+  \item La $g(t) = (at, bt)$ med konstanter $a$ og $b$ ulik $0$ og verifiser at
+    %
+    \begin{equation*}
+      (f \circ g)'(0) = \frac{ab^2}{a^2 + b^2},
+      \qquad \text{men} \qquad 
+      \nabla f(0,0) \cdot g'(0) = 0\,.
+    \end{equation*}
+    %
+    Forklar at dette ikke er i strid med kjerneregelen.
+\end{enumerate}
+
+\oppgave[K2016, Oppgave 1]
+
+\begin{enumerate}
+  \item Vis at $\displaystyle \lim_{(x,y) \to (0,0)} \frac{x^2y}{x^2 + y^2} =
+    0$.
+  \item La $f(w,x,y,z) = w - x^2y^3z$. Beregn grenseverdien:
+    %
+    \begin{equation*}
+      \lim_{h \to 0} \frac{f(5,2,1+h,-1) - f(5,2,1,-1)}{h}.
+    \end{equation*}
+\end{enumerate}
+
+
+\oppgave[V2016, Oppgave 1] La
+%
+\begin{equation*}
+  f(x, y) :=
+  \begin{cases}
+    \cfrac{2xy}{x^2 + y^2}, & \text{når} \quad (x,y) \neq (0,0), \\
+    0, & \text{når} \quad (x,y) = (0,0)
+  \end{cases}\,.
+\end{equation*}
+%
+Forklar hvorfor $f$ ikke er deriverbar i $(0,0)$, men de partiellderiverte
+$\diffp{f}{x}(0,0)$ og $\diffp{f}{y}(0,0)$ eksisterer.
+
+\oppgave[K2015, Oppgave 1] La
+%
+\begin{equation*}
+  f(x, y) :=
+  \begin{cases}
+    \cfrac{x^2y^4}{x^2 + y^2}, & \text{når} \quad (x,y) \neq (0,0), \\
+    0, & \text{når} \quad (x,y) = (0,0)
+  \end{cases}\,.
+\end{equation*}
+%
+\begin{enumerate}
+  \item Vis at $\diffp{f}{x}(0,0)$ og $\diffp{f}{y}(0,0)$ eksisterer
+  \item Vis at $f$ ikke er deriverbar i $(0,0)$ ved å vise at $f$ ikke er
+    kontinuerlig i $(0,0)$.
+\end{enumerate}
+
+\oppgave[K2014, Oppgave 3] Begrunn at funksjonen
+%
+\begin{equation*}
+  f(x, y) :=
+  \begin{cases}
+    \cfrac{\sin \sqrt{x^2+y^2\,}\,}{\sqrt{x^2 + y^2\,}\,}, & \text{når} \quad (x,y) \neq (0,0), \\
+    0, & \text{når} \quad (x,y) = (0,0)
+  \end{cases}\,,
+\end{equation*}
+%
+er kontinuerlig.
+
+\oppgave[K2013, Oppgave 3] Vis at en av grensene under eksisterer mens den andre
+ikke eksisterer
+%
+\begin{equation*}
+  \lim_{(x,y)\to(0,0)} \frac{xy}{\sqrt{x^2+y^2}}
+  \qquad
+  \lim_{(x,y)\to(0,0)} \frac{xy}{x^2 + y^2}.
+\end{equation*}
+
+
+\oppgave[K2012, Oppgave 5] Funksjonen $f$ er gitt ved
+%
+\begin{equation*}
+  f(x, y) :=
+  \begin{cases}
+    \cfrac{2xy}{\sqrt{x^2 + y^2\,}\,}, & \text{når} \quad (x,y) \neq (0,0), \\
+    0, & \text{når} \quad (x,y) = (0,0)
+  \end{cases}\,,
+\end{equation*}
+%
+\begin{enumerate}
+  \item Vis at $f$ er kontinuerlig i origo.
+  \item En kan vise at $f$ ikke er kontinuerlig deriverbar i origo. Vis likevel
+    at den retningsderiverte
+    %
+    \begin{equation*}
+      D_{\vek{u}}f(0,0) = \lim_{t \to 0^+} \frac{f(t u_1, t u_2) - f(0,0)}{t}
+    \end{equation*}
+    %
+    eksisterer for alle enhetsvektorer $\vek{u} = u_1 \I + u_2 \J$.
+\end{enumerate}
+
+\oppgave[V2010, Oppgave 3] Gitt funksjonen
+%
+\begin{equation*}
+  f(x, y) :=
+  \begin{cases}
+    \cfrac{Ax^3 + By^3 - xy}{2x^2 + 2y^2} & \text{når} \quad (x,y) \neq (0,0), \\
+    0, & \text{når} \quad (x,y) = (0,0)
+  \end{cases}\,.
+\end{equation*}
+%
+\begin{enumerate}
+\item Bestem konstanter $A$ og $B$ slik at $\diffp{f}{x}(0,0) = 3$ og
+$\diffp{f}{y}(0,0) = 0$. \medskip
+
+\item La nå $A = 6$ og $B = 0$. Er $f$ kontinuerlig i origo for dette valget av konstanter?
+\end{enumerate}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

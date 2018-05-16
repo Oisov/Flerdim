@@ -1,0 +1,15 @@
+\documentclass[tikz, border=1mm]{standalone}
+\usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{fadings}
+\tikzfading[name=myfading, path fading=south east]
+
+\begin{document}
+\begin{tikzpicture}
+  \def\a{0.1}
+  \fill[gray,path fading=south, fading angle=120] (\a,\a) -- (1+\a,\a) -- (1+\a,1+\a) -- (\a,1+\a);
+  \draw[-stealth,white] (-0.5,0) -- (1.5,0) node[below] {$y$};
+  \draw[-stealth,white] (0, -0.5) -- (0, 1.5) node[left] {$x$};
+  \node[white] at (0.6,0.6) {$D$};
+\end{tikzpicture}
+\end{document}

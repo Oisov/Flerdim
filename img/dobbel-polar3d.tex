@@ -1,0 +1,28 @@
+\documentclass[tikz, border = -8mm]{standalone}
+
+\usepackage{pgfplots}
+
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[
+            xtick = {-50,-60},
+            ytick = {-5,-6},
+        ztick = {-3,-4},
+    axis lines=center,
+    axis on top,
+    % xlabel={$x$}, ylabel={$y$}, zlabel={$z$},
+    domain=0:1,
+    y domain=0:2*pi,
+    xmin=-1, xmax=1, zmax = 0.7,
+    ymin=-1, ymax=1, zmin=-0.7,
+    samples=20,
+  samples y=40,
+  z buffer=sort,
+    axis line style={draw=none},
+    tick style={draw=none},
+  ]
+  \addplot3[surf] 
+  ({x*cos(deg(y))},{x*sin(deg(y))},{(x*cos(deg(y)))^3});
+\end{axis}
+\end{tikzpicture}
+\end{document}

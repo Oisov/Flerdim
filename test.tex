@@ -1,0 +1,95 @@
+\documentclass[a4paper, norsk, 12pt]{article}
+
+\usepackage{xparse}
+% Defines a simple bold text, \oppgave[text] produces Oppgave 1 (text). 
+\NewDocumentCommand{\oppgave}{o}{%
+  % <code>%
+  \noindent\\
+  % \textbf{\large Oppgave~\stepcounter{problemMA1103}\arabic{problemMA1103}}
+  \textbf{Oppgave~\stepcounter{problem\arabic{section}}\arabic{problem\arabic{section}}}
+  \IfNoValueTF{#1}
+  {}
+  {(#1)}%
+  \medskip\\\noindent
+  % <code>
+}
+\usepackage{totcount}
+\regtotcounter{section}
+
+\usepackage{nameref}
+\newcommand{\seksjon}[1]{\section{#1}\label{sec:\arabic{section}}\newcounter{problem\arabic{section}}}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+ 
+\begin{document}
+
+\seksjon{Integrals}
+
+\oppgave
+
+\seksjon{Derivatives}
+
+\oppgave
+\oppgave
+\oppgave
+\seksjon{Green's theorem}
+
+\oppgave
+\oppgave
+\seksjon{Gauss' Theorem}
+
+\oppgave
+\oppgave
+\seksjon{Stokes Theorem}
+
+\oppgave
+\oppgave
+\oppgave
+\oppgave
+
+
+The total number of chapters is \total{section}, in \nameref{sec:1} there are
+\arabic{problem1} problems and in \nameref{sec:5} there are
+\arabic{problem5} problems.
+
+\begin{tikzpicture}
+  \foreach \i in {1,...,\arabic{section}}
+  {
+    \node at (0, -\i) {\nameref{sec:\i}: \arabic{problem\i}};
+  }
+\end{tikzpicture} 
+
+\begin{figure}[htbp!]
+  \centering
+\begin{tikzpicture}
+    \begin{axis}[
+    xbar,
+    y=-0.5cm,
+    bar width=0.3cm,
+    y axis line style = { opacity = 0 },
+    axis x line       = none,
+    tickwidth         = 0pt,
+    enlarge y limits  = 0.2,
+    enlarge x limits  = 0.02,
+    ytick = data,
+    nodes near coords,
+    symbolic y coords = {%
+      Integrals, 
+      Derivatives,
+      Green's theorem,
+      Gauss' theorem, 
+      Stokes theorem}
+    ]
+    \addplot[fill=black] coordinates {%
+      (\arabic{problem1},Integrals)
+      (\arabic{problem2},Derivatives)
+      (\arabic{problem3},Green's theorem)  
+      (\arabic{problem4},Gauss' theorem)  
+      (\arabic{problem5},Stokes theorem)};
+%    \legend{Topics, Posts}
+    \end{axis}
+    \end{tikzpicture}
+  \end{figure}
+
+\end{document}

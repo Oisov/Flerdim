@@ -1,0 +1,126 @@
+
+\seksjon{Divergensteoremet}
+
+\oppgave[V2017, Oppgave 5]
+
+\begin{enumerate}
+  \item La $T$ være flata gitt ved $\{(x,y,z) \in \R^3 \mid x^2 + y^2 = 4
+    \ \text{og} \ 0 \leq z \leq 1\}$ og $\vek{F}$ være vektorfeltet
+    %
+    \begin{equation*}
+      \vek{F} = (x + \sin(z^2y), x^2 + z, 1 - z)
+    \end{equation*}
+    %
+    Regn ut $\div \vek{F}$ og finn
+    %
+    \begin{equation*}
+      \iint_T \vek{F} \cdot \vek{n} \dS 
+    \end{equation*}
+    %
+    der normalvektoren $\vek{n}$ peker ut av $T$.
+\end{enumerate}
+
+\oppgave[K2016, Oppgave 7]
+
+La $\vek{F}(x,y,z) = (bxy, bx^2y, (x^2 + y^2)z^2)$ og $W \subset \R^3$ være
+sylinderen
+%
+\begin{equation*}
+  W := \{  (x,y,z) \in \R^3 \mid x^2 + y^2 \leq a^2, z \in [0, b]\}
+\end{equation*}
+%
+der $a, b > 0$. Bruk Gauss' teorem til å finne $\displaystyle \iint_{\partial W} \vek{F} \cdot
+\dSS$.
+
+\oppgave[V2016, Oppgave 7]
+
+La $f \colon \R^3 \to R$ være en skalar $C^2$-funksjon og $\vek{F} \colon \R^3
+\to R^3$ et $C^1$-vektorfelt. La $W \subset \R^3$ være et området der Gauss'
+(divergensteoremet) gjelder og $\partial W$ overflata til $W$.
+
+\begin{enumerate}
+    \item Vis at $\div(f \vek{F}) = f \div \vek{F} + \nabla f \cdot \vek{F}$ og derfor
+    %
+    \begin{equation*}
+      \iint_{\partial W} f \vek{F} \cdot \vek{n} \dS
+      = \iint_{W} f \div \vek{F} \dV
+      + \iint_{W} \nabla f \cdot \vek{F} \dV 
+    \end{equation*}
+    %
+  \item Anta at
+    %
+    \begin{align*}
+      \nabla^2 & f(x,y,z) = 0 \qquad \text{når} \qquad (x,y,z) \in W  \\
+               & f(x,y,z) = 0 \qquad \text{når} \qquad (x,y,z) \in \partial W. 
+    \end{align*}
+    %
+    Vis at $f(x,y,z) = 0$ for alle $(x,y,z) \in W$. 
+\end{enumerate}
+
+\oppgave[K2015, Oppgave 7]
+
+La $S$ være delen av flata $z = 1 + x^2 + y^2$ som ligger inne i sylinderen $x^2
++ y^2 = 1$, og la $T$ være legemet begrenset av $S$ og planet $z = 2$.
+
+\begin{enumerate}
+  \item Gitt vektorfeltet $\vek{F} = f(x,y) \I + x g(x,y) \J + z \K$, der $f$ og
+    $g$ har kontinuerlige partiellderiverte som oppfyller
+    %
+    \begin{equation*}
+      \diffp{f}{x} + x \diffp{g}{y} = 0
+    \end{equation*}
+    %
+    for alle $x, y$.
+
+    Finn flateintegralet $\iint_S \vek{F} \cdot \dSS$, der enhetsnormalvektoren
+    til $S$ har \emph{negativ} $\K$ komponent.
+\end{enumerate}
+
+\oppgave[V2014, Oppgave 7]
+
+La $W$ være området i $\R^3$ gitt ved
+%
+\begin{equation*}
+  W := \{ (x,y,z) \in \R^3 \mid 0 \leq x \leq y \ \text{og} \ x^2 + y^2 \leq z \leq 1 \}\,
+\end{equation*}
+%
+med rand $S$ orientert slik at normalvektorene peker ut av $W$. La
+$\vek{F}$ være vektorfeltet gitt ved $\vek{F}(x,y,z) = (y,x^2,xz)$. Bestem
+%
+\begin{equation*}
+  \iint_{S} \vek{F} \cdot \dSS
+\end{equation*}
+
+\oppgave[K2013, Oppgave 7] La $T$ være legemet gitt ved $x \geq 0,$, $y \geq 0$
+og $0 \leq z \leq 1 - \sqrt{x^2 + y^2}$. La $S$ være overflaten til $T$
+orientert med enhetsnormal som peker ut av legemet $T$.
+
+\begin{enumerate}
+    \stepcounter{enumi}
+  \item Finn $\displaystyle (x + \cos y, y + \sin z, z + e^x) \cdot \dSS$
+\end{enumerate}
+
+\oppgave[K2012, Oppgave 6] Legemet $T$ er avgrenset av paraboloiden $z = 4x^2 +
+4y^2$ og planet $z = 4$. La $S$ være den delen av overflaten til $T$ som ligger
+på paraboloiden $z = 4x^2 + 4y^2$, og la $\vek{n}$ være enhetsnormalen til $S$
+som peker ut av legemet $T$. La videre $\vek{F}$ være vektorfeltet definert ved
+%
+\begin{equation*}
+  \vek{F}(x,y,z)
+  = \frac{yz}{8\pi} \I - \frac{x}{2\pi}\J + \frac{z}{4}\K
+\end{equation*}
+%
+\begin{enumerate}
+    \stepcounter{enumi}
+  \item Regn ut $\displaystyle \iint_S \vek{F} \cdot \vek{n} \dS$.
+\end{enumerate}
+
+
+\oppgave[V2012, Oppgave 5] Finn fluksen av vektorfeltet $\vek{F}(x,y,z) = (\sin
+y)^2\I + y\J + xz\K$ inn i enhetskula med sentrum i origo. 
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

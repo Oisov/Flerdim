@@ -1,0 +1,286 @@
+\documentclass[a4paper, norsk, 12pt]{article}   
+% ===================================
+% Language 
+% ===================================
+    \usepackage[norsk]{babel}
+    \usepackage[utf8]{inputenc}
+
+% ===================================
+% Typography
+% ===================================
+    \usepackage[margin=1in,includeheadfoot]{geometry}% <- instead package fullpage  
+    \usepackage{%
+    			lmodern,%
+    			fix-cm}% Better typography, e.g. kerning
+    			
+    \usepackage[activate={true,nocompatibility},
+    			final,
+    			tracking=true,
+    			kerning=true,
+    			spacing=true,
+    			factor=1100,
+    			stretch=10,
+    			shrink=10]{microtype} \LoadMicrotypeFile{bch}
+    \microtypecontext{spacing=nonfrench} 
+    
+% ===================================
+% Figures
+% ===================================
+\usepackage{graphicx}
+\usepackage{subcaption}
+    
+% ===================================
+% Mathematics
+% ===================================
+    \usepackage{amsmath, amssymb, amsthm, mathtools}   % Mijøer og verktøy for å
+    % skrive matematikk
+    \usepackage{esdiff}
+    \let\div\relax
+    \DeclareMathOperator{\div}{div}
+    % \DeclareMathOperator{\curl}{curl}
+    
+    % Øistein trenger flere egendefinerte kommandoer
+    
+    \DeclareMathOperator{\curl}{curl}
+    \DeclareMathOperator{\grad}{grad}
+    
+    \newcommand{\vek}[1]{\mathbf{#1}}
+    \newcommand{\unitvek}[1]{\vek{\hat{#1}}}
+    \newcommand{\normal}{\mathbf{n}}
+    
+    \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+    \DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+    \makeatletter
+    \newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+    \newcommand*{\dd}{\mathop{}\!{\operator@font d}}
+    \makeatother
+    
+    \newcommand{\R}{\mathbb{R}}
+    \newcommand{\N}{\mathbb{N}}
+    
+    \newcommand{\I}{\vek{i}}
+    \newcommand{\J}{\vek{j}}
+    \newcommand{\K}{\vek{k}}
+    \newcommand{\X}{\vek{x}}
+    \newcommand{\Y}{\vek{y}}
+    \newcommand{\A}{\vek{a}}
+    \newcommand{\B}{\vek{b}}
+    
+    \newcommand{\dt}{\mathop{}\! \mathrm{d} t\mathop{}\! }
+    \newcommand{\du}{\mathop{}\! \mathrm{d} u\mathop{}\! }
+    \newcommand{\dv}{\mathop{}\! \mathrm{d} v\mathop{}\! }
+    \newcommand{\ds}{\mathop{}\! \mathrm{d} s\mathop{}\! }
+    \newcommand{\dx}{\mathop{}\! \mathrm{d} x\mathop{}\! }
+    \newcommand{\dy}{\mathop{}\! \mathrm{d} y\mathop{}\! }
+    \newcommand{\dA}{\mathop{}\! \mathrm{d} A\mathop{}\! }
+    \newcommand{\dV}{\mathop{}\! \mathrm{d} V\mathop{}\! }
+    \newcommand{\dS}{\mathop{}\! \mathrm{d} S\mathop{}\! }
+    \newcommand{\dSS}{\mathop{}\! \mathrm{d} \vek{S}\mathop{}\! }
+
+% ===================================
+% Header and footer 
+% ===================================
+    \usepackage{lastpage} % number of last page 
+    \usepackage{fancyhdr}
+    
+    \pagestyle{fancy}
+    \fancyhf{}
+    \renewcommand\footrule{\begin{minipage}{1\textwidth}
+    \hrule width \hsize \kern 1mm \hrule width \hsize height 2pt  
+    \end{minipage}\par}%
+    
+    \renewcommand\headrule{\begin{minipage}{1\textwidth}
+    \hrule width \hsize height 2pt \kern 1mm \hrule width \hsize   
+    \end{minipage}\par}%
+    
+    \cfoot{\today}
+    \rfoot{Side \thepage\ av \pageref{LastPage}}
+    \lhead{MA1103 Flerdimensjonal analyse, vår 2018}
+    
+    \fancypagestyle{plain}{% Redefine ``plain'' style for chapter boundaries  
+      \fancyhf{} % clear all header and footer fields  
+      \renewcommand\footrule{\begin{minipage}{1\textwidth}
+      \hrule width \hsize \kern 1mm \hrule width \hsize height 2pt 
+      \end{minipage}\par}%
+      \renewcommand{\headrulewidth}{0pt}
+      %
+      \renewcommand{\headrule}{}% <- added
+      %
+      \fancyfoot[C]{\today} % except the center  
+      \fancyfoot[R]{Side \thepage\ av \pageref{LastPage}} % except the center  
+    }
+
+% ===================================
+% Problems 
+% ===================================
+    \usepackage{xparse}
+    \usepackage{nameref}
+    \newcounter{problem}
+    \newcounter{problemMA1103}
+    
+    %\DeclareDocumentCommand{\oppgave}{o}{Oppgave~\stepcounter{problemMA1103}\arabic{problemMA1103}}
+
+    % Defines a simple bold text, \oppgave[text] produces Oppgave 1 (text). 
+    \NewDocumentCommand{\oppgave}{o}{%
+      % <code>%
+      \noindent
+      % \textbf{\large Oppgave~\stepcounter{problemMA1103}\arabic{problemMA1103}}
+      \stepcounter{problem\arabic{section}}\paragraph{Oppgave~\arabic{problem\arabic{section}}}
+      \IfNoValueTF{#1}
+        {}
+        {(#1)}%
+        % \medskip\\\noindent
+        % <code>
+        \hspace{0.1cm}
+      }
+      \usepackage{totcount}
+      \regtotcounter{section}
+
+      \newcommand{\seksjon}[1]{\section{#1}\label{sec:\arabic{section}}\newcounter{problem\arabic{section}}}
+
+    
+    % Changes the style for enumerate
+    \usepackage{enumitem}
+    \setlist[enumerate,1]{label={\alph*)}}
+    \setlist[enumerate,2]{label={\roman*)}}
+
+% ===================================
+% Titlebox 
+% ===================================
+    \usepackage{tikz,pgfplots}   
+
+    % Defines the NTNU logo
+    \definecolor{mblue}{RGB}{0,72,161}
+    \newcommand{\ntnulogo}{%
+      \leavevmode
+      \vtop{
+        \hrule height 0pt
+        \hbox{%
+          \begin{tikzpicture}
+          \fill[mblue, rounded corners=5mm] (0,2) rectangle (2,4);
+          \fill[white] (0.5,2.5) rectangle (1.5,3.5);
+          \fill[mblue] (1,3) circle (4mm);
+          \end{tikzpicture}%
+        }
+      }
+    }
+    
+    % Rename this for other subjects / year
+    \newcommand{\course}{%
+      \leavevmode
+      \vtop{\LARGE
+        \hrule height 0pt
+        \ialign{\hfil##\cr
+          MA1103\cr
+          Flerdimensjonal analyse\cr
+          Vår 2018\cr
+        }%
+      }%
+    }
+    
+    % Creates the titlebox
+    % \titlebox{Øving 1}{Frist ...} or \titlebox{Løsningsforslag - Øving 1}{}
+    \newcommand{\titlebox}[2]{
+    \thispagestyle{plain}
+    \begin{center}
+    \setlength{\fboxsep}{0pt}
+    \fbox{%
+      \begin{minipage}{\dimexpr\textwidth-2\fboxrule}
+      \vspace{1pt}
+      \hrule height 1pt
+      \vspace{6pt}
+      \mbox{}\quad\ntnulogo\hfill\course\quad\mbox{}\\[3pt]
+      \mbox{}\quad
+      \begin{tabular}{@{}l@{}}
+      Norges teknisk-vitenskapelige\\
+      universitet\\
+      Institutt for matematiske fag
+      \end{tabular}\hfill%
+      \textbf{ #1. #2}\quad\mbox{}\\
+      \vspace{3pt}
+      \hrule height1pt
+      \vspace{1pt}
+      \end{minipage}%
+    }
+    \end{center}
+    }
+
+    
+\begin{document}
+
+\input{grenseverdier.tex}
+\input{gradient.tex}
+\input{epsilon-delta.tex}
+\newpage
+\input{kjerneregel.tex}
+\input{taylor.tex}
+\input{tangent.tex}
+\input{kritiske-punkter.tex}
+\newpage
+\input{optimering.tex}
+\input{linjeintegral.tex}
+\input{konservative-felt.tex}
+\input{dobbelintegral.tex}
+\input{rekkefolge.tex}
+\newpage
+\input{greens.tex}
+\input{trippelintegral.tex}
+\input{divergensteoremet.tex}
+\input{stokes.tex}
+
+\begin{tikzpicture}
+  \foreach \i in {1,...,\arabic{section}}
+  {
+    \node at (0, -\i) {\nameref{sec:\i}: \arabic{problem\i}};
+  };
+\end{tikzpicture}
+
+\begin{figure}[htbp!]
+  \centering
+    \begin{tikzpicture}
+      \begin{axis}[ xbar, y=-0.5cm, bar width=0.3cm, y axis line style = {
+          opacity = 0 }, axis x line = none, tickwidth = 0pt, enlarge y limits =
+        0.2, enlarge x limits = 0.02, ytick = data, nodes near coords, symbolic
+        y coords = {%
+          Grenseverdier,
+          Gradient,
+          Epsilon-Delta,
+          Kjerneregelen,
+          Taylor-approksimasjon,
+          Tangenter,
+          Kritiske punkter,
+          Optimering,
+          Linjeintegral,
+          Konservative vektorfelt,
+          Dobbelintegraler,
+          Integrasjonsrekkefølge,
+          Greens teorem,
+          Trippelintegral,
+          Divergensteoremet,
+          Stokes teorem
+          }
+          ]
+          \addplot[fill=black] coordinates {%
+            (\arabic{problem1},Grenseverdier)
+            (\arabic{problem2},Gradient)
+            (\arabic{problem3},Epsilon-Delta)  
+            (\arabic{problem4},Kjerneregelen)  
+            (\arabic{problem5},Taylor-approksimasjon)  
+            (\arabic{problem6},Tangenter)  
+            (\arabic{problem7},Kritiske punkter)  
+            (\arabic{problem8},Optimering)
+            (\arabic{problem9},Linjeintegral)
+            (\arabic{problem10},Konservative vektorfelt)
+            (\arabic{problem11},Dobbelintegraler)  
+            (\arabic{problem12},Integrasjonsrekkefølge)  
+            (\arabic{problem13},Greens teorem)  
+            (\arabic{problem14},Trippelintegral)  
+            (\arabic{problem15},Divergensteoremet)  
+            (\arabic{problem16},Stokes teorem)};
+        % \legend{Topics, Posts}
+      \end{axis}
+    \end{tikzpicture}
+  \end{figure}
+
+\end{document}

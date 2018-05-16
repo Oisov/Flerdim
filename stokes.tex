@@ -1,0 +1,100 @@
+
+\seksjon{Stokes' teorem}
+
+
+\oppgave[V2017, Oppgave 5]
+
+\begin{enumerate}
+    \stepcounter{enumi}
+  \item La $S$ være ei kuleflate i $\R^3$ og $\vek{F} \colon \R^3 \to \R^3$ ett
+    glatt vektorfelt. Vis at
+    %
+    \begin{equation*}
+     \iint_S \curl \vek{F} \cdot \dSS = 0.
+    \end{equation*}
+\end{enumerate}
+
+
+\oppgave[V2015, Oppgave 9]
+
+La $S$ være sylinderflata $\{(x,y,z) \in \R^3 \mid x^2 + y^2 = 1 \text{og} \ 0
+\leq z \leq 1\}$. Finn
+%
+\begin{equation*}
+  \iint_S \curl \vek{v} \cdot \dSS
+\end{equation*}
+%
+når $\vek{v} = (v_1, v_2, v_3)$ er et $C^2$-vektofelt i $\R^3$ der  $v_1$ og
+$v_2$ ikke avhenger av $z$.
+
+
+\oppgave[K2014]
+
+I denne oppgaven studerer vi de to flatene
+%
+\begin{align*}
+  S_1 & := \{ (x,y,z) \in \R^3 \mid x^2 + y^2 + z^2 = 1, \ z \geq 1\} \\
+  S_2 & := \{ (x,y,z) \in \R^3 \mid x^2 + y^2 + \frac{z^2}{4} = 1, \ z \geq 1\} 
+\end{align*}
+%
+som berre er orientert slik at normalvektoren til $S_1$ i $(0,0,1)$ og $S_2$ i
+$(0,0,2)$ er $\K$.
+
+\begin{enumerate}
+  \item Begrun at hvis $\vek{F}$ er et $C^1$ vektorfelt i $\R^3$, så er
+    %
+    \begin{equation*}
+      \iint_{S_1} \curl \vek{F} \cdot \dSS = \iint_{S_2} \curl \vek{F} \cdot \dSS\,.
+    \end{equation*}
+    %
+  \item Finn verdien av integralene når $\vek{F}(x,y,z) = -2y \I + x\J + e^{x^2+z}\K$.
+\end{enumerate}
+
+\oppgave[V2013, Oppgave 6] I denne oppgaven er
+
+\begin{itemize}
+  \item $S$ sfæren (kuleoverflaten) med sentrum i $(0,0,3)$ og radius $5$,
+    orientert slik at normalvektoren peker ut av kula.
+  \item $S^+$ den delen av $S$ som ligger over $xy$-planet, med samme
+    orientering som $S$.
+  \item $C$ er randen til $S^+$, med positiv orientering i samsvar med
+    orienteringen til $S^+$.
+  \item $\vek{F}(x,y,z) = (16 - x^2 - y^2)\I + z\J + (x + y + z)\K$.
+\end{itemize}
+
+\begin{enumerate}
+  \item Finn en parametrisering for kurven $C$ (husk orienteringen). Lag en
+    skisse som viser $S^+$, $C$ og $T$. Merk på orienteringene til $S^+$ og $C$.
+    \stepcounter{enumi}
+  \item Finn fluksen til $\curl \vek{F}$ gjennom flaten $S^+$. Altså beregn
+    %
+    $ \displaystyle 
+    \int_{S^+} \curl \vek{F} \cdot \dSS.
+    $
+\end{enumerate}
+
+\oppgave[K2012, Oppgave 6] Legemet $T$ er avgrenset av paraboloiden $z = 4x^2 +
+4y^2$ og planet $z = 4$. La $S$ være den delen av overflaten til $T$ som ligger
+på paraboloiden $z = 4x^2 + 4y^2$, og la $\vek{n}$ være enhetsnormalen til $S$
+som peker ut av legemet $T$. La videre $\vek{F}(x,y,z)$ være vektorfeltet definert ved
+%
+\begin{equation*}
+  \vek{F}(x,y,z)
+  = \frac{yz}{8\pi} \I - \frac{x}{2\pi}\J + \frac{z}{4}\K.
+\end{equation*}
+%
+\begin{enumerate}
+    \setcounter{enumi}{2}
+  \item Regn ut $\displaystyle \iint_S \curl \vek{F} \cdot \vek{n} \dS$.
+\end{enumerate}
+
+\oppgave[V2012, Oppgave 5] La $S$ være halvkula $x^2 + y^2 + z^2 = 4$ med $z\leq
+0$ orientert nedover. La $\vek{F}(x,y,z) = x \tan (z/4) \I + x e^{e^{z^4}}\J +
+xyz \K$. Finn integralet $\displaystyle \iint_S \curl \vek{F} \cdot \dSS$.
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:
