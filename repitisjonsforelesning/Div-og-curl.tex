@@ -48,8 +48,8 @@
 mot klokken er den negativ, mens dersom vektorfeltet er rotasjonsfritt er kurlen
       null.
     \item $\curl \F = \nabla \times \F =
-      \begin{vmatrix} \I & \J & \K \\ \frac{\partial}{\partial x} &
-        \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\ F_1 & F_2  & F_3
+      \begin{vmatrix} \I & \J & \K \\ \cfrac{\partial}{\partial x} &
+        \cfrac{\partial}{\partial y} & \cfrac{\partial}{\partial z}\\ F_1 & F_2  & F_3
       \end{vmatrix} \ $ og $ \ \2d-curl \F = \diffp{{F_2}}{x} - \diffp{{F_1}}{y} $.
   \end{itemize}
   \begin{center}
@@ -94,7 +94,7 @@ mot klokken er den negativ, mens dersom vektorfeltet er rotasjonsfritt er kurlen
     \curl \F =
     \begin{vmatrix}
       \I & \J & \K \\
-      \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
+      \cfrac{\partial}{\partial x} & \cfrac{\partial}{\partial y} & \cfrac{\partial}{\partial z}\\
       F_1 & F_2  & F_3
     \end{vmatrix}
      \qquad \text{og} \qquad
@@ -106,19 +106,19 @@ mot klokken er den negativ, mens dersom vektorfeltet er rotasjonsfritt er kurlen
      \begin{vmatrix} \only<2>{\I} \only<3>{\circled{\I}} \only<6->{\I}
        & \only<2>{\J} \only<4>{\circled{\J}} \only<6->{\J}
        & \only<2>{\K} \only<5>{\circled{\K}} \only<6->{\K} \\
-         \only<2>{\frac{\partial}{\partial x}} \only<4->{\frac{\partial}{\partial x}}
-       & \only<2-3>{\frac{\partial}{\partial y}} \only<5->{\frac{\partial}{\partial y}}
-       & \only<2-4>{\frac{\partial}{\partial y}} \only<6->{\frac{\partial}{\partial y}}\\
-         \only<2>{\frac{\partial f}{\partial x}} \only<4->{\frac{\partial f}{\partial x}}
-       & \only<2-3>{\frac{\partial f}{\partial y}} \only<5->{\frac{\partial f}{\partial y}}
-       & \only<2-4>{\frac{\partial f}{\partial z}} \only<6->{\frac{\partial f}{\partial z}}
+         \only<2>{\cfrac{\partial}{\partial x}} \only<4->{\cfrac{\partial}{\partial x}}
+       & \only<2-3>{\cfrac{\partial}{\partial y}} \only<5->{\cfrac{\partial}{\partial y}}
+       & \only<2-4>{\cfrac{\partial}{\partial y}} \only<6->{\cfrac{\partial}{\partial y}}\\
+         \only<2>{\cfrac{\partial f}{\partial x}} \only<4->{\cfrac{\partial f}{\partial x}}
+       & \only<2-3>{\cfrac{\partial f}{\partial y}} \only<5->{\cfrac{\partial f}{\partial y}}
+       & \only<2-4>{\cfrac{\partial f}{\partial z}} \only<6->{\cfrac{\partial f}{\partial z}}
     \end{vmatrix}}
-        \only<7>{&}\only<3-7>{=\I \begin{vmatrix} \frac{\partial}{\partial y} & \frac{\partial f}{\partial z} \\
-                  \frac{\partial}{\partial z} & \frac{\partial f}{\partial y} \end{vmatrix}}
-        \only<4-7>{- \J \begin{vmatrix} \frac{\partial}{\partial x} & \frac{\partial f}{\partial z} \\
-                  \frac{\partial}{\partial x} & \frac{\partial f}{\partial y} \end{vmatrix}}
-        \only<5-7>{+ \K \begin{vmatrix} \tfrac{\partial}{\partial y} & \tfrac{\partial f}{\partial x} \\
-            \tfrac{\partial}{\partial z} & \tfrac{\partial f}{\partial y} \end{vmatrix}\\}
+        \only<7>{&}\only<3-7>{=\I \begin{vmatrix} \cfrac{\partial}{\partial y} & \cfrac{\partial f}{\partial z} \\
+                  \cfrac{\partial}{\partial z} & \cfrac{\partial f}{\partial y} \end{vmatrix}}
+        \only<4-7>{- \J \begin{vmatrix} \cfrac{\partial}{\partial x} & \cfrac{\partial f}{\partial z} \\
+                  \cfrac{\partial}{\partial x} & \cfrac{\partial f}{\partial y} \end{vmatrix}}
+        \only<5-7>{+ \K \begin{vmatrix} \cfrac{\partial}{\partial y} & \cfrac{\partial f}{\partial x} \\
+            \cfrac{\partial}{\partial z} & \cfrac{\partial f}{\partial y} \end{vmatrix}\\}
    \only<7->{
     & = \I \left( \tfrac{\partial}{\partial y} \tfrac{\partial f}{\partial z}
       -           \tfrac{\partial}{\partial z} \tfrac{\partial f}{\partial y} \right)

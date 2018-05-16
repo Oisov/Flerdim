@@ -61,15 +61,15 @@
 \visible<2->{
       Gradienten er gitt som
       %
-      \begin{align*}
+      \begin{equation*}
         \nabla g(x,y,z)
         = (\only<2>{\diffp{g}{x}}\only<3>{\diffp{}{x}\left( x^3+y^3-3xy -z\right)}\only<4->{3x^2 - 3y},
           \only<2-4>{\diffp{g}{y}}\only<5>{\diffp{}{y}\left( x^3+y^3-3xy -z\right)}\only<6->{3y^2 - 3x},
           \only<2-6>{\diffp{g}{z}}\only<7>{\diffp{}{z}\left( x^3+y^3-3xy -z\right)}\only<8->{-1})
-      \end{align*}
+      \end{equation*}
       %
-      Siden gradienten peker i samme retning som normalvektorn setter vi
-      $\vek{n} = \nabla g(2,2,4) = (6,6,-1)$.}
+      \only<8>{Siden gradienten peker i samme retning som normalvektoren setter vi
+     $\vek{n} = \nabla g(2,2,4) = (6,6,-1)$.}}
     \item Bruke den generelle likningen for et plan (normalvektor prikket med
       posisjonsvektor) $\vek{n} \cdot (\rr - \rr_0) = 0$.
 

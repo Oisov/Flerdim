@@ -16,7 +16,8 @@
    (TeX-run-style-hooks
     "latex2e"
     "Derivasjon"
-    "Div-og-curl"
+    "Tangenter"
+    "Kritiske-punkter"
     "Integrasjon"
     "beamer"
     "beamer10"
