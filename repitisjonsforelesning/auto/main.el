@@ -6,19 +6,35 @@
    (TeX-add-to-alist 'LaTeX-provided-package-options
                      '(("fontenc" "T1") ("inputenc" "utf8") ("rsfso" "scr")))
    (add-to-list 'LaTeX-verbatim-environments-local "semiverbatim")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperref")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
     "Derivasjon"
+    "Grenseverdier"
+    "Gradient"
+    "Epsilon-Delta"
+    "Div-og-curl"
+    "Kjerneregelen"
+    "Taylor-approksimasjon"
     "Tangenter"
     "Kritiske-punkter"
+    "Optimering"
     "Integrasjon"
+    "Linjeintegral"
+    "Konservative-vektorfelt"
+    "Dobbelintegraler"
+    "Integrasjonsrekkefolge"
+    "Trippelintegral"
+    "Greens-teorem"
+    "Overflateintegral"
+    "Divergensteoremet"
+    "Stokes-teorem"
     "beamer"
     "beamer10"
     "fontenc"
@@ -43,6 +59,9 @@
     '("rom" 1)
     '("unitvek" 1)
     '("vek" 1)
+    "curl"
+    "2d"
+    "grad"
     "normal"
     "La"
     "dd"

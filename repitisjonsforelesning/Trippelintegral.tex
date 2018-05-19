@@ -51,5 +51,54 @@
 \begin{frame}
   \subsection{Trippelintegral}\label{subsec:Trippelintegral}
   \frametitle{Trippelintegral}
-  Some more text here
+  \begin{enumerate}
+    \item Tegn integrasjonsområdet i $xy$, $xz$ og $yz$-planet
+    \item Bestem grensene
+    \item Gjør forenklinger med hensyn på symmetri
+    \item Beregn trippelintegralet og bytt grenser om nødvendig
+  \end{enumerate}
 \end{frame}
+
+\begin{frame}
+    \begin{oppgave}{}
+    Bestem volumet til $R = \{ (x,y,z)\in\R^3 \mid 0 \leq z \leq 1 - \abs{x} - \abs{y}\}$ når
+    massetettheten er gitt som $f(x,y,z) = xy + z^2$.
+  \end{oppgave}
+\end{frame}
+
+\begin{frame}\centerline{Viser området $0 \leq z \leq 1 - \abs{x} - \abs{y}$}
+  \centerline{%
+  \includegraphics[width = 0.45\textwidth]{../img/pyramid1}%
+  \includegraphics[width = 0.45\textwidth]{../img/pyramid2}}
+
+\centerline{%
+  \includegraphics[width = 0.45\textwidth]{../img/pyramid3}%}
+  \includegraphics[width = 0.45\textwidth]{../img/pyramid}}
+\end{frame}
+
+\begin{frame}
+    \begin{oppgave}{}
+    Bestem volumet til $R = \{ (x,y,z)\in\R^3 \mid 0 \leq z \leq 1 - \abs{x} - \abs{y}\}$ når
+    massetettheten er gitt som $f(x,y,z) = xy + z^n$, $n \in \mathbb{Z}$.
+  \end{oppgave}
+  Siden $\int_{-a}^a f(x) \dx = 0$ når $f$ er en odde funksjon, og $x$ er odde så
+er $\iiint_{R}xy \dV = 0$. Da området vi integrerer over er symmetrisk. Volumet
+til den blå og røde trekanten er like store, men med motsatt fortegn.
+\begin{align*}
+  M & = \iiint_R f(x,y,z) \dV = \iiint_R z^n \dV\\
+    \only<2>{& = \int_{x=?}^{x=?} \int_{y=f(x)}^{y=g(x)}\int_{z=u(x,y)}^{z=v(x,y)} z^n \dz \dy \dx \\}
+    \only<3->{& = \int_{x=-1}^{x=1} \int_{y=-1+\abs{x}}^{y=1-\abs{x}}\int_{z=0}^{z=1-\abs{x}-\abs{y}} z^n \dz \dy \dx\\}
+    \visible<4->{& = 4\int_{0}^{1} \int_{0}^{1-x}\int_{0}^{1-x-y} z^n \dz \dy \dx \\}
+    \visible<5->{& = 4\int_{0}^{1} \int_{0}^{1-x} \frac{(1-x-y)^{n+1}}{n+1} \dy \dx \\
+    & = 4\int_{0}^{1} \frac{(1-x)^{n+2}}{(n+1)(n+2)}  \dx 
+      = \frac{4}{(n+1)(n+2)(n+3)}}
+\end{align*}
+\end{frame}
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

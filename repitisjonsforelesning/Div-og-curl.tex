@@ -108,28 +108,28 @@ mot klokken er den negativ, mens dersom vektorfeltet er rotasjonsfritt er kurlen
        & \only<2>{\K} \only<5>{\circled{\K}} \only<6->{\K} \\
          \only<2>{\cfrac{\partial}{\partial x}} \only<4->{\cfrac{\partial}{\partial x}}
        & \only<2-3>{\cfrac{\partial}{\partial y}} \only<5->{\cfrac{\partial}{\partial y}}
-       & \only<2-4>{\cfrac{\partial}{\partial y}} \only<6->{\cfrac{\partial}{\partial y}}\\
+       & \only<2-4>{\cfrac{\partial}{\partial z}} \only<6->{\cfrac{\partial}{\partial z}}\\
          \only<2>{\cfrac{\partial f}{\partial x}} \only<4->{\cfrac{\partial f}{\partial x}}
        & \only<2-3>{\cfrac{\partial f}{\partial y}} \only<5->{\cfrac{\partial f}{\partial y}}
        & \only<2-4>{\cfrac{\partial f}{\partial z}} \only<6->{\cfrac{\partial f}{\partial z}}
     \end{vmatrix}}
         \only<7>{&}\only<3-7>{=\I \begin{vmatrix} \cfrac{\partial}{\partial y} & \cfrac{\partial f}{\partial z} \\
-                  \cfrac{\partial}{\partial z} & \cfrac{\partial f}{\partial y} \end{vmatrix}}
+                  \cfrac{\partial}{\partial y} & \cfrac{\partial f}{\partial z} \end{vmatrix}}
         \only<4-7>{- \J \begin{vmatrix} \cfrac{\partial}{\partial x} & \cfrac{\partial f}{\partial z} \\
-                  \cfrac{\partial}{\partial x} & \cfrac{\partial f}{\partial y} \end{vmatrix}}
-        \only<5-7>{+ \K \begin{vmatrix} \cfrac{\partial}{\partial y} & \cfrac{\partial f}{\partial x} \\
-            \cfrac{\partial}{\partial z} & \cfrac{\partial f}{\partial y} \end{vmatrix}\\}
+                  \cfrac{\partial}{\partial x} & \cfrac{\partial f}{\partial z} \end{vmatrix}}
+        \only<5-7>{+ \K \begin{vmatrix} \cfrac{\partial}{\partial x} & \cfrac{\partial f}{\partial y} \\
+            \cfrac{\partial}{\partial x} & \cfrac{\partial f}{\partial y} \end{vmatrix}\\}
    \only<7->{
     & = \I \left( \tfrac{\partial}{\partial y} \tfrac{\partial f}{\partial z}
       -           \tfrac{\partial}{\partial z} \tfrac{\partial f}{\partial y} \right)
-      - \J \left( \tfrac{\partial}{\partial y} \tfrac{\partial f}{\partial z}
-      -           \tfrac{\partial}{\partial z} \tfrac{\partial f}{\partial y} \right)
-      + \K \left( \tfrac{\partial}{\partial y} \tfrac{\partial f}{\partial z}
-      -           \tfrac{\partial}{\partial z} \tfrac{\partial f}{\partial y} \right)\\}
+      - \J \left( \tfrac{\partial}{\partial x} \tfrac{\partial f}{\partial z}
+      -           \tfrac{\partial}{\partial z} \tfrac{\partial f}{\partial x} \right)
+      + \K \left( \tfrac{\partial}{\partial x} \tfrac{\partial f}{\partial y}
+      -           \tfrac{\partial}{\partial y} \tfrac{\partial f}{\partial x} \right)\\}
    \only<8->{
     & = \I \left( \tfrac{\partial^2f}{\partial y \partial z} - \tfrac{\partial^2f}{\partial z\partial y} \right)
-      - \J \left( \tfrac{\partial^2f}{\partial y \partial z} - \tfrac{\partial^2f}{\partial z\partial y} \right)
-      + \K \left( \tfrac{\partial^2f}{\partial y \partial z} - \tfrac{\partial^2f}{\partial z\partial y} \right)}
+      - \J \left( \tfrac{\partial^2f}{\partial x \partial z} - \tfrac{\partial^2f}{\partial z\partial x} \right)
+      + \K \left( \tfrac{\partial^2f}{\partial x \partial y} - \tfrac{\partial^2f}{\partial y\partial x} \right)}
    \only<9->{ \intertext{Siden funksjonen er $C^2$ er alle de kryss-partiellderiverte like slik at}
     & = \I 0 - \J 0 + \K 0 = \vek{0}}
   \end{align*}

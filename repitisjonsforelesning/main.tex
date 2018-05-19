@@ -121,6 +121,21 @@ height=1cm, text centered, draw=black, fill=green!30]
 
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
+    % Grouping the common style settings here to make the code below easier to read
+    \pgfkeys{/pgfplots/Trigonometric Style/.style={
+        width=13.5cm, height=5cm,
+        grid=both,
+        grid style={line width=.1pt, draw=gray!10},
+        major grid style={line width=.2pt,draw=gray!50},
+            axis x line=center, 
+            axis y line=middle, 
+        enlargelimits={abs=0.5},
+        samples=300,
+        ymin=-1.5, ymax=1.5,
+        xmin=-1.0, xmax=7.0,
+        domain=0:2*pi
+    }}
+
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=2pt] (char) {$#1$};}}
 
@@ -200,26 +215,26 @@ height=1cm, text centered, draw=black, fill=green!30]
 
 % Derivasjon
 \input{Derivasjon.tex}              % Done
-% \input{Grenseverdier.tex}           % Done 
-% \input{Gradient.tex} 
-% \input{Epsilon-Delta.tex}           % Done
-% \input{Div-og-curl.tex}             % Done 
-% \input{Kjerneregelen.tex}           % Done
-% \input{Taylor-approksimasjon.tex}   % Done
+\input{Grenseverdier.tex}           % Done 
+\input{Gradient.tex} 
+\input{Epsilon-Delta.tex}           % Done
+\input{Div-og-curl.tex}             % Done 
+\input{Kjerneregelen.tex}           % Done
+\input{Taylor-approksimasjon.tex}   % Done
 \input{Tangenter.tex}               % Done
 \input{Kritiske-punkter.tex}        % Done
-% \input{Optimering.tex}
+\input{Optimering.tex}
 
 % Integrasjon
 \input{Integrasjon.tex}             % Done 
-% \input{Linjeintegral.tex}           % Done 
-% \input{Konservative-vektorfelt.tex} % Done 
-% \input{Dobbelintegraler.tex}        % Done 
-% \input{Integrasjonsrekkefolge.tex}  % Done  
-% \input{Trippelintegral.tex}
-% \input{Greens-teorem.tex}           % Done
-% \input{Overflateintegral.tex}       % Done
-% \input{Divergensteoremet.tex}
-% \input{Stokes-teorem.tex}
+\input{Linjeintegral.tex}           % Done 
+\input{Konservative-vektorfelt.tex} % Done 
+\input{Dobbelintegraler.tex}        % Done 
+\input{Integrasjonsrekkefolge.tex}  % Done  
+\input{Trippelintegral.tex}
+\input{Greens-teorem.tex}           % Done
+\input{Overflateintegral.tex}       % Done
+\input{Divergensteoremet.tex}
+\input{Stokes-teorem.tex}
 
 \end{document}

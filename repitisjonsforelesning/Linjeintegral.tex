@@ -74,7 +74,7 @@
   \end{oppgave}
   
   \column{0.38\linewidth} \vspace{0.5cm}
-  \only<1>{\includegraphics[width=0.6\linewidth]{../img/vektorfelt-linjeintegral-0}}
+  \only<1>{\includegraphics{../img/vektorfelt-linjeintegral-0}}
   \only<2>{\includegraphics{../img/vektorfelt-linjeintegral-1}}
   \only<3>{\includegraphics{../img/vektorfelt-linjeintegral-2}}
   \only<4>{\includegraphics{../img/vektorfelt-linjeintegral-3}}
@@ -94,7 +94,70 @@
       = \int_0^{2\pi} \frac{a^2}{2} \dT 
       =  \pi a^2 }
     \end{align*}
-\end{frame}
+  \end{frame}
+
+  \begin{frame}
+\frametitle{Trigonometri: like funksjoner}
+    \begin{tikzpicture}
+        \begin{axis}[
+            Trigonometric Style,
+            legend style={at={(0.68,1)},anchor=north east},
+            legend style = {draw = none},
+            legend style = {fill=none},
+            xtick={
+                -6.28318, -4.7123889, -3.14159, -1.5708,
+                1.5708, 3.14159, 4.7123889, 6.28318
+            },
+            xticklabels={
+                $-2\pi$, $-\frac{3\pi}{2}$, $-\pi$, $-\frac{\pi}{2}$,
+                $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, $2\pi$
+            }
+        ]
+        \addplot [mark=none, ultra thick, red] {cos(deg(x))^2};
+        \addplot [mark=none, ultra thick, blue] {sin(deg(x))^2};
+        \legend{$(\cos x)^2$,$(\sin x)^2$}
+        \end{axis}
+    \end{tikzpicture}
+    \begin{theorem}
+    Det å integrere $(\cos x)^2$ eller $(\sin x)^2$ over intervaler som er multiplum av $\pi/2$ er det samme som å integrere $1/2$ over samme intervalet:
+        \begin{align*}
+              \int_{m\pi/2}^{n\pi/2} (\sin x)^2 \mathrm{d}x
+            = \int_{m\pi/2}^{n\pi/2}  (\cos x)^2 \mathrm{d}x
+            = \frac{1}{2} \int_{m\pi/2}^{n\pi/2}  \mathrm{d}x \qquad m,n \in \mathbb{Z}
+    \end{align*}
+    \end{theorem}
+  \end{frame}
+
+  \begin{frame}
+    \begin{tikzpicture}
+        \begin{axis}[
+            Trigonometric Style,
+            legend style={at={(0.68,1)},anchor=north east},
+            legend style = {draw = none},
+            legend style = {fill=none},
+            xtick={
+                -6.28318, -4.7123889, -3.14159, -1.5708,
+                1.5708, 3.14159, 4.7123889, 6.28318
+            },
+            xticklabels={
+                $-2\pi$, $-\frac{3\pi}{2}$, $-\pi$, $-\frac{\pi}{2}$,
+                $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, $2\pi$
+            }
+        ]
+        \addplot [mark=none, ultra thick, red] {cos(deg(x))^2};
+        \addplot [mark=none, ultra thick, blue] {sin(deg(x))^2};
+        \legend{$(\cos x)^2$,$(\sin x)^2$}
+        \end{axis}
+      \end{tikzpicture}
+      \begin{align}
+        &\int_0^{\pi/2} (\sin x)^2 \dx
+        \only<1>{ \overset{u \mapsto x - \pi/2}{=} -\int_{\pi/2}^0 (\sin(\pi/2 - u))^2 \du}
+        \only<2->{= \int_0^{\pi/2} (\cos x)^2 \dx }
+        \only<3>{\\ & (\cos x)^2 + (\sin x)^2 = 1}\only<4>{\\ & \int_0^{\pi/2} (\sin x)^2 + (\cos x)^2 \dx = \int_0^{\pi/2} 1 \dx}\only<5->{\\ & \int_0^{\pi/2} (\sin x)^2\dx + \int_0^{\pi/2}(\cos x)^2 \dx = \int_0^{\pi/2} 1 \dx}
+                                                                                                                          \visible<6->{\\  & \hspace{3cm}\Downarrow \notag \\
+        &\int_0^{\pi/2} (\sin x)^2 \dx = \int_0^{\pi/2} (\cos x)^2 \dx  = \int_0^{\pi/2} \frac{\dx}{2}}
+      \end{align}
+  \end{frame}
 
 %%% Local Variables:
 %%% mode: latex

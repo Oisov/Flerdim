@@ -62,13 +62,37 @@
   lukket stykkevis-glatt randkurve $C$ med positiv orientasjon. Dersom $\F$ er
   et vektorfelt med kontinuerlige partiellderiverte på $S$ så er
   \begin{equation*}
-    \iint_S \curl \F \cdot \dSS = \int_C \F \cdot \dr
+    \iint_S \curl \F \cdot \dSS = \int_C \F \cdot \dr.
   \end{equation*}
 \end{theorem}
 \centerline{
   \includegraphics[scale=0.5]{../img/stokes-surface.png}
 }
 \end{frame}
+
+\begin{frame}
+  \begin{oppgave}{K2012, Oppgave 6c}
+    Legemet $T$ er avgrenset av paraboloiden $z = 4x^2 +4y^2$ og planet $z = 4$.
+    La $S$ være den delen av overflaten til $T$ som ligger på paraboloiden $z =
+    4x^2 + 4y^2$ , og la $\vek{n}$ være enhetsnormalen til $S$ som peker ut av
+    legemet $T$ . Vektorfeltet $F$ er
+$
+  \F(x, y, z) = \frac{yz}{8\pi}\I - \frac{x}{2\pi} \J + \frac{z}{4}\K
+$. Regn ut 
+\begin{equation*}
+  \iint_S \curl \F \cdot \vek{n} \dS.
+\end{equation*}
+\end{oppgave}
+\end{frame}
+\begin{frame}
+\centerline{%
+\includegraphics[width=0.4\textwidth]{../img/stokes-xz}%
+\includegraphics[width=0.4\textwidth]{../img/stokes-yz}}
+\centerline{%
+\includegraphics[width=0.4\textwidth]{../img/stokes-xy}%
+\includegraphics[width=0.4\textwidth]{../img/stokes-3d}}
+\end{frame}
+
 \begin{frame}
   \begin{oppgave}{K2012, Oppgave 6c}
     Legemet $T$ er avgrenset av paraboloiden $z = 4x^2 +4y^2$ og planet $z = 4$.
@@ -85,24 +109,29 @@ $. Regn ut
 
 \only<1->{
 Flatene $z = 4x^2 + 4z^2$ og $z = 4$ skjærer hverandre i sirkelen $x^2 + y^2 =
-1$, $z = 4$. }\only<2->{La $C$ betegne sirkelen med radius $r = 1$ og $z = 4$, orientert
-\emph{med} urviseren sett ovenfra. Bruker parametriseringen
+1$, $z = 4$. }\only<2->{Randen til legemet $T$ er altså sirkelen med radius $r =
+1$ og $z = 4$, som vi kaller $C$. Vi ønsker å beregne fluxen ut av det
+\textcolor{red}{røde} området fra forrige side. Normalvektoren peker ut av
+legemet, altså
+\emph{nedover} og vi må parametrisere randen $C$ \emph{med}-klokken og ikke mot
+som vanlig.
 \begin{equation*}
   \rr(\theta) = (\sin \theta) \I + (\cos \theta) \J + 4 \K 
 \end{equation*}}
 \only<7>{
+\vspace{-0.5cm}
   \begin{equation*}
   \iint_S \curl \F \cdot \vek{n} \dS = 
-  \int_C \F \cdot \dr= \frac{1}{2}
+  \int_C \F \cdot \dr= 1
 \end{equation*}}
 \visible<3-6>{
   \vspace{-0.5cm}
 \begin{equation*}
   \int_C \F \cdot \dr
-  \only<3>{= \int_0^{2\pi} (0, -\frac{\sin t}{2\pi}, 1)(\sin t, -\sin t, 0) \dt}
-  \only<4->{= \frac{1}{2\pi}\int_0^{2\pi} (\sin t)^2 \dt}
-  \visible<5->{= \frac{1}{2\pi}\int_0^{2\pi} \frac{1}{2} \dt}
-  \visible<6>{= \frac{1}{2}}
+  \only<3>{= \int_0^{2\pi} (\frac{4(\cos t)}{8\pi}, -\frac{\sin t}{2\pi}, 1)(\cos t, -\sin t, 0) \dt}
+  \only<4->{= \frac{1}{2\pi}\int_0^{2\pi} (\cos t)^2 + (\sin t)^2 \dt}
+  \visible<5->{= \frac{1}{2\pi}\int_0^{2\pi} 1 \dt}
+  \visible<6>{= 1}
 \end{equation*}}
 
 \end{frame}
