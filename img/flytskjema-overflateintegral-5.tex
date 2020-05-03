@@ -1,5 +1,5 @@
 \documentclass[tikz]{standalone}
-\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc} 			
 \usepackage[norsk]{babel}
 
 \usepackage{amsmath, amssymb, amsthm, mathtools}   % Mijøer og verktøy for å
@@ -8,7 +8,7 @@
 \DeclareMathOperator{\div}{div}
 \DeclareMathOperator{\curl}{curl}
 \DeclareMathOperator{\grad}{grad}
-
+    
 \newcommand{\vek}[1]{\mathbf{#1}}
 \newcommand*{\dd}{\mathop{}\!{\operator@font d}}
 \newcommand{\F}{\vek{F}}
@@ -44,18 +44,14 @@ height=1cm, text centered, draw=black, fill=green!30]
 
 \begin{tikzpicture}[node distance=2cm]
 
-  \node (start) [startstop,fill=blue!40!white] {$\displaystyle \iint_{S} \F \cdot \dSS$};
-  \node (stop1) [startstop, right of=start, xshift=2cm, align=left]
-  {$\displaystyle \iiint_{T} \div \F \dV$};
-  \node (dec1) [decision, below of=stop1, yshift=-0.5cm, align=left] {$S$ closed?};
+  \node (start) [starting,fill=blue!40!white] {$\displaystyle \iint_{S} \F \cdot \dSS$};
+  \node (stop1) [startstop, right of=start, xshift=2cm, align=left] {$\displaystyle\iiint_{T} \div \F \dV$};
+  \node (dec1) [decision, below of=stop1, yshift=-0.5cm, align=left] {$S$ lukket?};
   \node (dec2) [decision, left of=dec1, xshift=-2cm, align=left] {$\F = \curl \G$?};
-  \node (dec3) [decision, left of=dec2, xshift=-2cm, align=left] {$S \cup B$ closed?};
-  \node (stop2) [startstop, below of=dec3, yshift=-0.5cm, xshift=1.43cm,
-  align=left] {$\displaystyle \int_a^b\int_c^d \F(\rr(u,v))\cdot \left( \diffp{\rr}{u} \times \diffp{\rr}{v} \right)\mathrm{d}(u,v)$};
-  \node (stop3) [startstop, above of=dec3, yshift=0.5cm, align=left]
-  {$\displaystyle \int_{\partial S} \G \cdot \dr$};
-  \node (stop4) [startstop, right of=stop2, xshift=4cm, align=left]
-  {$\displaystyle \iiint_T \div \F \dV - \iint_B \F \dSS$};
+  \node (dec3) [decision, left of=dec2, xshift=-2cm, align=left] {$S \cup B$ lukket?};
+  \node (stop2) [startstop, below of=dec3, yshift=-0.5cm, xshift=1.43cm, align=left] {$\displaystyle\iint_R \F(\rr(u,v))\cdot \left( \diffp{\rr}{u} \times \diffp{\rr}{v} \right)\mathrm{d}(u,v)$};
+  \node (stop3) [startstop, above of=dec3, yshift=0.5cm, align=left] {$\displaystyle\int_{\partial S} \G \cdot \dr$};
+  \node (stop4) [startstop, right of=stop2, fill = orange, xshift=4cm, align=left] {$\displaystyle\iiint_T \div \F \dV - \iint_B \F\cdot\dSS$};
 
   \draw [arrow] (start) -- (dec1);
   \draw [arrow] (dec1) -- node[anchor=west] {Ja} (stop1);

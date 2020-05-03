@@ -28,9 +28,9 @@
         {\topicref{Greens-teorem}},
         {\topicref{Divergensteoremet}},
         {\topicref{Stokes-teorem}}}]
-      \addplot[fill=black] coordinates {(8,0)};
-      \addplot[fill=black] coordinates {(4,1)};
-      \addplot[fill=red] coordinates {(1,2)};
+      \addplot[fill=gray] coordinates {(8,0)};
+      \addplot[fill=gray] coordinates {(4,1)};
+      \addplot[fill=dgreen] coordinates {(1,2)};
       \addplot[fill=black] coordinates {(7,3)};
       \addplot[fill=black] coordinates {(1,4)};
       \addplot[fill=black] coordinates {(7,5)};
@@ -100,7 +100,19 @@ $
   \norm{f(\X) - f(\Y)}
   \leq K \norm{\X - \Y}^{\alpha}
   < K \delta^{\alpha}
-\end{equation*}}
+\end{equation*}
+%
+Vi ønsker å bestemme $\delta$ slik at
+$\norm{f(\X) - f(\Y)} < \varepsilon$. Fra uttrykket over ønsker vi altså
+%
+\begin{equation*}
+     K \delta^{\alpha}
+  < \varepsilon
+\end{equation*}
+%
+Ved å løse likningen med hensyn på $\delta$ får vi
+$\delta = (\varepsilon/K)^{1/\alpha}$.
+}
 %
 \visible<3->{%
 \begin{proof}

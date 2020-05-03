@@ -28,13 +28,13 @@
         {\topicref{Greens-teorem}},
         {\topicref{Divergensteoremet}},
         {\topicref{Stokes-teorem}}}]
-      \addplot[fill=black] coordinates {(8,0)};
-      \addplot[fill=black] coordinates {(4,1)};
-      \addplot[fill=black] coordinates {(1,2)};
-      \addplot[fill=black] coordinates {(7,3)};
-      \addplot[fill=black] coordinates {(1,4)};
-      \addplot[fill=black] coordinates {(7,5)};
-      \addplot[fill=red] coordinates {(11,6)};
+      \addplot[fill=gray] coordinates {(8,0)};
+      \addplot[fill=gray] coordinates {(4,1)};
+      \addplot[fill=gray] coordinates {(1,2)};
+      \addplot[fill=gray] coordinates {(7,3)};
+      \addplot[fill=gray] coordinates {(1,4)};
+      \addplot[fill=gray] coordinates {(7,5)};
+      \addplot[fill=dgreen] coordinates {(11,6)};
       \addplot[fill=black] coordinates {(4,7)};
       \addplot[fill=black] coordinates {(3,8)};
       \addplot[fill=black] coordinates {(8,9)};
@@ -42,15 +42,36 @@
       \addplot[fill=black] coordinates {(3,11)};
       \addplot[fill=black] coordinates {(4,12)};
       \addplot[fill=black] coordinates {(4,13)};
-      \addplot[fill=black] coordinates {(8,14)}; 
+      \addplot[fill=black] coordinates {(8,14)};
       \addplot[fill=black] coordinates {(6,15)};
     \end{axis}
   \end{tikzpicture}
 \end{frame}
-
 \begin{frame}
   \subsection{Kritiske punkter}\label{subsec:Kritiske-punkter}
   \only<1>{\frametitle{Kritiske punkter}}
+  Kritiske punkter kommer i tre typer: maksimum, minimum og saddelpunkter.
+  Disse kan igjen enten være globale, eller lokale.
+  Kritiske punkter kan oppstå tre ulike plasser
+  %
+  \begin{enumerate}
+    \item Hvor $f' = 0$
+    \item Randpunktene til $f$.
+    \item (Skjøtepunktene til $f$. For eksempel: $|x|$)
+  \end{enumerate}
+  %
+  \begin{example}
+  Dersom $f \colon [0,1] \to \R$ så er randpunktene til $f$
+  $x=0$ og $x=1$.
+\end{example}
+  \begin{example}
+Tilsvarende om $f \colon \mathbb{D}^{1} \to \R$ der
+  $\mathbb{D}^1 = \{(x,y) \in \R^2 \mid x^2 + y^2 \leq 1\}$ så er randpunktene
+  alle punkter slik at $x^2 + y^2=1$. (Området er en disk, randen er en sirkel.)
+\end{example}
+\end{frame}
+
+\begin{frame}
   \begin{theorem}[Annenderivertetesten i to variable]
     La $\A$ være et punkt kritisk punkt ($\nabla f(\A) = 0$) for en funksjon
     $f(x,y)$ med kontinuerlige annenordens partiellderiverte. Definer $D(x,y)$
@@ -77,7 +98,7 @@
   \begin{intuisjon}
     \only<2>{Anta $f_{xx}f_{yy}<0$. Enten $f_{xx}<0$ og $f_{yy}>0$ eller
     $f_{yy}<0$ og $f_{xx}>0$ uansett så har funksjonen positiv krumning $\cup$ i
-    den ene retningen og negativ krumning 
+    den ene retningen og negativ krumning
     i den andre $\cap$ $\Rightarrow$ åpenbart saddelpunkt (pringles).}
   \only<3>{Anta $f_{xx}f_{yy}>0$. Hvis $f_{xx}>0$ og $f_{yy}>0$ så har $f$
     positiv krumning $\cup$ omkring
@@ -93,7 +114,7 @@ på en (pringles) eller en (bolle/øvre halvkule)?}
   \begin{oppgave}{K2015, Oppgave 4a}
     Funksjonen $f \colon \R^2 \to \R$ er gitt ved $f(x,y) = 2x^2 - x^4 + y^2$. Finn alle kritiske
     punkter til $f$, og avgjør om disse er lokale maksima, minima eller
-    saddelpunkter. 
+    saddelpunkter.
   \end{oppgave}%
   %
   \vspace{-0.5cm}
@@ -105,7 +126,7 @@ på en (pringles) eller en (bolle/øvre halvkule)?}
 %
 \begin{equation*}
   \diffp{\La}{x} = \only<2>{4x - 4x^3}\only<3->{4x(1-x^2)}
-  \quad \text{og} \quad 
+  \quad \text{og} \quad
   \diffp{\La}{y} = 2y
 \end{equation*}}
 %
@@ -145,7 +166,7 @@ på en (pringles) eller en (bolle/øvre halvkule)?}
 \begin{align*}
   & \diffp{\La}{x} = 4x - 4x^3 - 4\lambda x^3,
   &&\diffp{\La}{y} = \only<2>{2y - \lambda 2y}\only<3->{2y(1-\lambda)}
-  \quad \text{og} \quad 
+  \quad \text{og} \quad
   &&\diffp{\La}{\lambda} = x^4 + y^2 - 4
 %
 \only<3>{\intertext{Fra $\La_y = 2y(1-\lambda)=0$ får vi at enten $y = 0$ eller
@@ -155,7 +176,7 @@ på en (pringles) eller en (bolle/øvre halvkule)?}
   &\diffp{\La}{x} = \only<4-6>{4x - 4x^3 - 4\only<4-5>{\lambda} x^3}\only<7->{4x(1-2x^2)},
   \quad
   &&\diffp{\La}{y} = 0
-  \quad \text{og} \quad 
+  \quad \text{og} \quad
   &&\diffp{\La}{\lambda} = x^4 \only<6->{+ y^2} - 4}
 \end{align*}}
 %

@@ -47,12 +47,12 @@ height=1cm, text centered, draw=black, fill=green!30]
   \node (dec3) [decision, left of=dec1, xshift=-2cm] {$\partial D$ lukket?};
   \node (stop1) [startstop, below of=dec2, yshift=-0.5cm, align=left] {$0$};
   \node (stop2) [startstop, above of=dec2, yshift=0.5cm, align=left]
-  {$\displaystyle \int_{\partial D} \nabla f \cdot \dr = f(B) - f(A)$};
-  \node (stop3) [startstop, fill=orange, above of=dec3, yshift=0.5cm,
-  align=left] {$\displaystyle \int_a^b \F(\rr(t)) \cdot \rr'(t) \dt$};
+    {$\displaystyle \int_{\partial D} \nabla f \cdot \dr = f(B) - f(A)$};
+  \node (stop3) [startstop, above of=dec3, yshift=0.5cm, align=left]
+    {$\displaystyle \int_a^b \F(\rr(t)) \cdot \rr'(t) \dt$};
   \node (dec4) [decision, below of=dec3, yshift=-0.5cm] {$\F$ i $\R^2$?};
-  \node (stop4) [startstop, below of=dec1, yshift=-0.5cm, align=left]
-  {$\displaystyle \iint_{D} \diffp{{F_2}}{x} - \diffp{{F_1}}{y} \,\mathrm{d}(x,y)$};
+  \node (stop4) [startstop, fill=orange, below of=dec1, yshift=-0.5cm,
+    align=left] {$\displaystyle \iint_{D} \diffp{{F_2}}{x} - \diffp{{F_1}}{y} \,\mathrm{d}(x,y)$};
 
   % \draw [arrow] (dec6) -- node[anchor=west] {Nei} (stop4);
 

@@ -1,14 +1,16 @@
-\documentclass[screen, aspectratio=43, serif]{beamer}
+\documentclass[screen, aspectratio=43, serif, norsk]{beamer}
 
 %\includeonlyframes{current}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
-% Use the NTNU-temaet for beamer 
+% Use the NTNU-temaet for beamer
 % \usetheme[style=ntnu|simple|vertical|horizontal, language=bm|nn|en]{ntnu2015}
 
 \usetheme[language=norsk]{Boadilla}
+\usepackage[norsk]{babel}
+
 \setbeamertemplate{frametitle}{\centerline{\bfseries\insertframetitle}}
 % \setbeamertemplate{frametitle}[default][center]
 
@@ -27,11 +29,11 @@
     \usepackage{amsmath, amssymb, amsthm, mathtools}   % Mijøer og verktøy for å
     % skrive matematikk
     \usepackage{esdiff, esint}
-    
+
 \let\div\relax
 \DeclareMathOperator{\div}{div}
 \DeclareMathOperator{\curl}{curl}
-    
+
 
     \DeclareMathOperator{\2d-curl}{2d-curl}
     \DeclareMathOperator{\grad}{grad}
@@ -42,7 +44,7 @@
 
     \usepackage[scr]{rsfso}
     \newcommand{\La}{\mathscr{L}}
-    
+
     \DeclarePairedDelimiter\abs{\lvert}{\rvert}%
     \DeclarePairedDelimiter\norm{\lVert}{\rVert}%
 
@@ -50,12 +52,12 @@
     \newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
     \newcommand*{\dd}{\mathop{}\!{\operator@font d}}
     \makeatother
-    
+
     \newcommand{\F}{\vek{F}}
     \newcommand{\rr}{\vek{r}}
     \newcommand{\R}{\mathbb{R}}
     \newcommand{\N}{\mathbb{N}}
-    
+
     \newcommand{\I}{\vek{i}}
     \newcommand{\J}{\vek{j}}
     \newcommand{\K}{\vek{k}}
@@ -63,7 +65,7 @@
     \newcommand{\Y}{\vek{y}}
     \newcommand{\A}{\vek{a}}
     \newcommand{\B}{\vek{b}}
-    
+
     \newcommand{\dt}{\mathop{}\! \mathrm{d} t\mathop{}\! }
     \newcommand{\dT}{\mathop{}\! \mathrm{d} \theta\mathop{}\! }
     \newcommand{\du}{\mathop{}\! \mathrm{d} u\mathop{}\! }
@@ -127,8 +129,8 @@ height=1cm, text centered, draw=black, fill=green!30]
         grid=both,
         grid style={line width=.1pt, draw=gray!10},
         major grid style={line width=.2pt,draw=gray!50},
-            axis x line=center, 
-            axis y line=middle, 
+            axis x line=center,
+            axis y line=middle,
         enlargelimits={abs=0.5},
         samples=300,
         ymin=-1.5, ymax=1.5,
@@ -139,11 +141,13 @@ height=1cm, text centered, draw=black, fill=green!30]
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=2pt] (char) {$#1$};}}
 
-\title[s.ntnu.no/MA1103]{Flerdimhistorien på 90 minutter}
-\subtitle{s.ntnu.no/MA1103}
+\colorlet{dgreen}{green!40!black}
+
+\title[tinyurl.com/flerdim2020]{Flerdimhistorien på 90 minutter}
+\subtitle{tinyurl.com/flerdim2020}
 \author[Ø. Søvik]{Øistein Søvik}
 
-\date{Mai 2018}
+\date{Mai 2020}
 %\date{} % To have an empty date
 
 \begin{document}
@@ -154,7 +158,8 @@ height=1cm, text centered, draw=black, fill=green!30]
 
 \begin{frame}\centerline{
   \begin{tikzpicture}[scale=0.75]
-    \begin{axis}[ xbar=0pt, /pgf/bar shift=0pt, legend style={ legend columns=4,
+    \begin{axis}[ xbar=0pt, /pgf/bar shift=0pt,
+      legend style={legend columns=4,
         at={(xticklabel cs:0.5)}, anchor=north, draw=none }, ytick={0,...,15},
       ytick style={draw=none},% <- added
       axis y line*=none, axis x line*=bottom, tick label
@@ -182,7 +187,7 @@ height=1cm, text centered, draw=black, fill=green!30]
         {\topicref{Greens-teorem}},
         {\topicref{Divergensteoremet}},
         {\topicref{Stokes-teorem}}}]
-      \addplot[fill=red] coordinates {(8,0)};
+      \addplot[fill=dgreen] coordinates {(8,0)};
       \addplot[fill=black] coordinates {(4,1)};
       \addplot[fill=black] coordinates {(1,2)};
       \addplot[fill=black] coordinates {(7,3)};
@@ -200,7 +205,7 @@ height=1cm, text centered, draw=black, fill=green!30]
       \addplot[fill=black] coordinates {(6,15)};
     \end{axis}
   \end{tikzpicture}}
-  
+
   \textbf{Plan:}
   \begin{enumerate}
     \item Før pausen: Derivasjon 7 temaer
@@ -209,16 +214,17 @@ height=1cm, text centered, draw=black, fill=green!30]
   \end{enumerate}
 \end{frame}
 
-% \input{Introduksjon.tex}
+\input{Introduksjon.tex}
 
 % 14/20 Done
 
+
 % Derivasjon
 \input{Derivasjon.tex}              % Done
-\input{Grenseverdier.tex}           % Done 
-\input{Gradient.tex} 
+\input{Grenseverdier.tex}           % Done
+\input{Gradient.tex}
 \input{Epsilon-Delta.tex}           % Done
-\input{Div-og-curl.tex}             % Done 
+\input{Div-og-curl.tex}             % Done
 \input{Kjerneregelen.tex}           % Done
 \input{Taylor-approksimasjon.tex}   % Done
 \input{Tangenter.tex}               % Done
@@ -226,11 +232,11 @@ height=1cm, text centered, draw=black, fill=green!30]
 \input{Optimering.tex}
 
 % Integrasjon
-\input{Integrasjon.tex}             % Done 
-\input{Linjeintegral.tex}           % Done 
-\input{Konservative-vektorfelt.tex} % Done 
-\input{Dobbelintegraler.tex}        % Done 
-\input{Integrasjonsrekkefolge.tex}  % Done  
+\input{Integrasjon.tex}             % Done
+\input{Linjeintegral.tex}           % Done
+\input{Konservative-vektorfelt.tex} % Done
+\input{Dobbelintegraler.tex}        % Done
+\input{Integrasjonsrekkefolge.tex}  % Done
 \input{Trippelintegral.tex}
 \input{Greens-teorem.tex}           % Done
 \input{Overflateintegral.tex}       % Done

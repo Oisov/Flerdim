@@ -28,7 +28,7 @@
         {\topicref{Greens-teorem}},
         {\topicref{Divergensteoremet}},
         {\topicref{Stokes-teorem}}}]
-      \addplot[fill=red] coordinates {(8,0)};
+      \addplot[fill=dgreen] coordinates {(8,0)};
       \addplot[fill=black] coordinates {(4,1)};
       \addplot[fill=black] coordinates {(1,2)};
       \addplot[fill=black] coordinates {(7,3)};
@@ -90,7 +90,7 @@
       \end{cases}.
     \end{equation*}
     %
-    Forklar hvorfor $f$ ikke er deriverbar i $(0,0)$, men de partiellderiverte
+    Er $f$ kontinuerlig? Forklar hvorfor $f$ ikke er deriverbar i $(0,0)$, men de partiellderiverte
     $\diffp{f}{x}(0,0)$ og $\diffp{f}{y}(0,0)$ eksisterer.
   \end{oppgave}
     \only<1-4>{\textbf{Steg 1:} Forenkle $f(x,ax^b)$ mest mulig.}
@@ -108,8 +108,9 @@
     \only<7>{= \frac{a}{3a^2 + 1}}
   \end{equation*}}
   %
-  \only<7>{Siden $f$ ikke er kontinuerlig kan den naturlig nok heller ikke være
-    deriverbar!}
+  \only<7>{Følger vi $y=ax^3$ nærmer vi oss en verdi forskjellig fra $f(0,0)$
+    når vi nærmer oss origo. Siden $f$ ikke er kontinuerlig kan den naturlig nok heller ikke være
+  deriverbar! \textit{Pssst: Husk å vise figur her Øistein!}}
   \only<8>{%
     \begin{itemize}
         \item Notasjonen $\diffp{f}{x}(0,0)$ betyr \emph{ikke} den deriverte med
@@ -129,14 +130,14 @@
       f'(\A; \rr) & = \lim_{h \to 0} \frac{f(\A + h \rr) - f(\A)}{h}\\
       \diffp{f}{x}(0,0) & =
       \only<9>{\lim_{h \to 0} \frac{f((0,0) + h (1,0)) - f(0,0)}{h}}
-      \only<10>{\lim_{h \to 0} \frac{f(h,0) - f(0,0)}{h}} 
-      \only<11>{\lim_{h \to 0} \frac{\frac{0\cdot h^3}{3\cdot 0^2 + h^6} - 0}{h}} 
+      \only<10>{\lim_{h \to 0} \frac{f(h,0) - f(0,0)}{h}}
+      \only<11>{\lim_{h \to 0} \frac{\frac{0\cdot h^3}{3\cdot 0^2 + h^6} - 0}{h}}
       \only<12>{\lim_{h \to 0} \frac{0 - 0}{h} = 0} \\
       \diffp{f}{y}(0,0) & =
       \only<9>{\lim_{h \to 0} \frac{f((0,0) + h (0,1)) - f(0,0)}{h}}
       \only<10>{\lim_{h \to 0} \frac{f(0,h) - f(0,0)}{h}}
-      \only<11>{\lim_{h \to 0} \frac{\frac{h \cdot 0^3}{3h^2 + 0^6} - 0}{h}} 
-      \only<12>{\lim_{h \to 0} \frac{0 - 0}{h} = 0} 
+      \only<11>{\lim_{h \to 0} \frac{\frac{h \cdot 0^3}{3h^2 + 0^6} - 0}{h}}
+      \only<12>{\lim_{h \to 0} \frac{0 - 0}{h} = 0}
     \end{align*}
   }
 \end{frame}
@@ -154,7 +155,7 @@
   \only<1-4>{\textbf{Steg 1}: Uttrykket inneholder $x^2 + y^2$ så vi forenkler $f(r \cos
     \theta, r \sin \theta)$.}
   \only<5-6>{
-  \textbf{Steg 2}: Undersøker om $\lim_{r \to 0} f(r \cos \theta, r\sin \theta)$ er uavhengig av $\theta$.} 
+  \textbf{Steg 2}: Undersøker om $\lim_{r \to 0} f(r \cos \theta, r\sin \theta)$ er uavhengig av $\theta$.}
   \begin{align*}
   \only<1>{
     & \ \frac{(r\cos \theta) (r\sin \theta)}{\sqrt{(r\cos \theta)^2 + (r\sin \theta)^2}\,}

@@ -28,16 +28,16 @@
         {\topicref{Greens-teorem}},
         {\topicref{Divergensteoremet}},
         {\topicref{Stokes-teorem}}}]
-      \addplot[fill=black] coordinates {(8,0)};
-      \addplot[fill=black] coordinates {(4,1)};
-      \addplot[fill=black] coordinates {(1,2)};
-      \addplot[fill=black] coordinates {(7,3)};
-      \addplot[fill=black] coordinates {(1,4)};
-      \addplot[fill=black] coordinates {(7,5)};
-      \addplot[fill=black] coordinates {(11,6)};
-      \addplot[fill=black] coordinates {(4,7)};
-      \addplot[fill=black] coordinates {(3,8)};
-      \addplot[fill=red] coordinates {(8,9)};
+      \addplot[fill=gray] coordinates {(8,0)};
+      \addplot[fill=gray] coordinates {(4,1)};
+      \addplot[fill=gray] coordinates {(1,2)};
+      \addplot[fill=gray] coordinates {(7,3)};
+      \addplot[fill=gray] coordinates {(1,4)};
+      \addplot[fill=gray] coordinates {(7,5)};
+      \addplot[fill=gray] coordinates {(11,6)};
+      \addplot[fill=gray] coordinates {(4,7)};
+      \addplot[fill=gray] coordinates {(3,8)};
+      \addplot[fill=dgreen] coordinates {(8,9)};
       \addplot[fill=black] coordinates {(7,10)};
       \addplot[fill=black] coordinates {(3,11)};
       \addplot[fill=black] coordinates {(4,12)};
@@ -80,7 +80,7 @@
   \begin{oppgave}{V2015, Oppgave 8}
     La $\F \colon \R^3 \mapsto \R^3$ være gitt ved $\F(x, y, z) = yz\I +
     xz\J + xy\K$. Bestem
-    % 
+    %
     \begin{equation*}
       \int_C \F \cdot \dr\,,
     \end{equation*}
@@ -110,7 +110,7 @@ $\curl \F = \vek{0}$ så er $\F$ et konservativ felt.}%
     \only<2-4>{%
   \hspace{-0.2cm}
       \curl \F
-    & = \nabla \times \F = 
+    & = \nabla \times \F =
   \begin{vmatrix}
     \I & \J & \K \\
     \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
@@ -127,7 +127,7 @@ $\curl \F = \vek{0}$ så er $\F$ et konservativ felt.}%
   \only<5>{
       \diffp{f}{x} & = yz \Rightarrow f = xyz + C(y,z) \\
       \diffp{f}{y} & = xz \Rightarrow f = xyz + D(x,z) \\
-      \diffp{f}{z} & = xy \Rightarrow f = xyz + E(x,y) 
+      \diffp{f}{z} & = xy \Rightarrow f = xyz + E(x,y)
     }
   \end{align*}}
 \only<5>{Velger $C(y,z)=D(x,z)=E(x,y)=0$ slik at $f(x,y,z) = xyz$.}

@@ -28,21 +28,21 @@
         {\topicref{Greens-teorem}},
         {\topicref{Divergensteoremet}},
         {\topicref{Stokes-teorem}}}]
-      \addplot[fill=black] coordinates {(8,0)};
-      \addplot[fill=black] coordinates {(4,1)};
-      \addplot[fill=black] coordinates {(1,2)};
-      \addplot[fill=black] coordinates {(7,3)};
-      \addplot[fill=black] coordinates {(1,4)};
-      \addplot[fill=black] coordinates {(7,5)};
-      \addplot[fill=black] coordinates {(11,6)};
-      \addplot[fill=black] coordinates {(4,7)};
-      \addplot[fill=black] coordinates {(3,8)};
-      \addplot[fill=black] coordinates {(8,9)};
-      \addplot[fill=black] coordinates {(7,10)};
-      \addplot[fill=black] coordinates {(3,11)};
-      \addplot[fill=black] coordinates {(4,12)};
-      \addplot[fill=black] coordinates {(4,13)};
-      \addplot[fill=red] coordinates {(8,14)};
+      \addplot[fill=gray] coordinates {(8,0)};
+      \addplot[fill=gray] coordinates {(4,1)};
+      \addplot[fill=gray] coordinates {(1,2)};
+      \addplot[fill=gray] coordinates {(7,3)};
+      \addplot[fill=gray] coordinates {(1,4)};
+      \addplot[fill=gray] coordinates {(7,5)};
+      \addplot[fill=gray] coordinates {(11,6)};
+      \addplot[fill=gray] coordinates {(4,7)};
+      \addplot[fill=gray] coordinates {(3,8)};
+      \addplot[fill=gray] coordinates {(8,9)};
+      \addplot[fill=gray] coordinates {(7,10)};
+      \addplot[fill=gray] coordinates {(3,11)};
+      \addplot[fill=gray] coordinates {(4,12)};
+      \addplot[fill=gray] coordinates {(4,13)};
+      \addplot[fill=dgreen] coordinates {(8,14)};
       \addplot[fill=black] coordinates {(6,15)};
     \end{axis}
   \end{tikzpicture}
@@ -68,12 +68,12 @@
   \end{theorem}
   \begin{minipage}{.45\textwidth}
     \begin{intuisjon}
-      % 
+      %
       Anta du har en \emph{full} bolle med vann, og heller på mer vann. Hva
       skjer? Jo det renner vann ut av overflaten til bollen. Med andre ord er
       summen av endring i vesketetthet ($\iiint_V \div \F \dV$) lik
       hvor mye væske som forlater overflaten ($\iint_S \F \cdot \dSS$).
-      % 
+      %
     \end{intuisjon}
 \end{minipage}
 \begin{minipage}{.45\textwidth}
@@ -93,14 +93,14 @@
       enkeltsammenhengende?
       Ja, enhetskula er åpenbart lukket og enkeltsammenhengdende.
       \item Har vektor feltet $F$ kontinuerlige partiellderiverte definert på
-      $W$. Ja, alle polynomer og $\sin x$ er deriverbare. 
+      $W$. Ja, alle polynomer og $\sin x$ er deriverbare.
   \end{enumerate}}\only<3->{
   Har at normalvektoren er $-\vek{n}$ siden den skulle peke \emph{inn} i kula.
   \begin{align*}
     \iint_{S} \F \cdot (-\vek{n}) \dS
     & = -\iint_{S} \F \cdot \vek{n}\dS
     \overset{\text{Gauss}}{=} -\iiint_{V} \div \F \dV \\
-    & = -\iiint_V 0 + 0 + \only<1-5>{x}\only<6>{3} \dV 
+    & = -\iiint_V 0 + 0 + \only<1-5>{x}\only<6>{3} \dV
       = -\iiint_V \only<1-5>{x}\only<6>{3} \dV\only<5>{=0}\only<6>{=\,?}
   \end{align*}}
 \end{frame}
@@ -115,37 +115,37 @@
 
 \begin{frame}
     \begin{example}
-        Halvkulen $T$ er bestemt av 
+        Halvkulen $T$ er bestemt av
         %
         $x^2 + y^2 + z^2 \leq 1$ og $z \geq 0$
         %
-        Vi lar $S$ betegne den krumme delen av overflaten til $T$. 
-        Vektorfeltet $\mathbf{F}$ er gitt ved 
+        Vi lar $S$ betegne den krumme delen av overflaten til $T$.
+        Vektorfeltet $\mathbf{F}$ er gitt ved
         %
         \begin{equation*}
             \mathbf{F}(x,y,z)
             = x(z+z^2)\I - (yz^2 + xe^y)\J + (xze^y + 1)\K
         \end{equation*}
         %
-        Bestem fluksintegralet 
+        Bestem fluksintegralet
         %
         $ \displaystyle
         \iint_{S} \mathbf{F} \cdot \vek{n} \, \mathrm{d}S
         $
         %
-        der $\vek{n}$ har positiv $z$-komponent. 
+        der $\vek{n}$ har positiv $z$-komponent.
       \end{example}
       \begin{enumerate}
-        \item Regne ut $\text{div } \mathbf{F} \only<2->{=(z + z^2)-(z^2 + xe^y)
+        \item Divergens: $ \only<2->{\text{div } \mathbf{F}=(z + z^2)-(z^2 + xe^y)
           + xe^y} \only<3->{=z}$
       \end{enumerate}
       \only<1-2>{
       \begin{equation*}
-        \div \F 
+        \div \F
         = \diffp{}{x}\bigl( x(z+z^2) \bigr) - \diffp{}{y}\bigl( yz^2 + xe^y \bigr) + \diffp{}{z}\bigl( xze^y + 1 \bigr)
       \end{equation*}}
       \begin{enumerate}\setcounter{enumi}{1}
-        \item Bruke divergensteoremet på hele overflaten til $T$
+        \item Bruke divergensteoremet på \emph{hele} overflaten til $T$
       \end{enumerate}
       \only<3->{
         \begin{equation*}
@@ -186,9 +186,9 @@
     \end{figure}
 \begin{align*}
     \iint_{T} \F \cdot \vek{n} \dS
-    \qquad =  \qquad 
+    \qquad =  \qquad
     \iint_{S} \F \cdot \vek{n} \dS
-    \qquad + \qquad  
+    \qquad + \qquad
     \iint_{B} \F \cdot \vek{n} \dS
 \end{align*}
 \end{frame}
@@ -216,9 +216,9 @@
     \end{figure}
 \begin{align*}
     \iiint_{T} \text{div }\F \dV
-    \qquad =  \qquad 
+    \qquad =  \qquad
     \iint_{S} \F \cdot \vek{n} \dS
-    \qquad + \qquad  
+    \qquad + \qquad
     \iint_{B} \F \cdot \vek{n} \dS
 \end{align*}
 \end{frame}
@@ -246,9 +246,9 @@
     \end{figure}
 \begin{align*}
     \iint_{S} \F \cdot \vek{n} \dS
-    \qquad =  \qquad 
-    \iiint_{T} \div \F \dV 
-    \qquad - \qquad  
+    \qquad =  \qquad
+    \iiint_{T} \div \F \dV
+    \qquad - \qquad
     \iint_{B} \F \cdot \vek{n} \dS
 \end{align*}
 \end{frame}
@@ -260,8 +260,8 @@
     \mathbf{F}(x,y,z)
     = x(z+z^2)\I - (yz^2 + xe^y)\J + (xze^y + 1)\K
     $ \\ \medskip
-    
-    Beregner overflateintegralet \emph{ut} av bunnen. Siden normalvektoren må peke ut av flaten får vi $\vek{n} = (0,0,-1)$ Så 
+
+    Beregner overflateintegralet \emph{ut} av bunnen. Siden normalvektoren må peke ut av flaten får vi $\vek{n} = (0,0,-1)$ Så
     %
     \begin{align*}
         \iint_{B} \F \cdot \vek{n} \dS
@@ -273,7 +273,7 @@
     Siden $z = 0$ og $B$ er en sirkel med radius $1$. Oppsumert har vi altså
 \begin{align*}
     \iint_{S} \F \cdot \vek{n} \dS
-    & = 
+    & =
     \iiint_{T} \div \F \dV
     -
     \iint_{B} \F \cdot \vek{n} \dS \\

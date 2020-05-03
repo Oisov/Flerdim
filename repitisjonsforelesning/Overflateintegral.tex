@@ -5,7 +5,7 @@
     \only<1>{\includegraphics{../img/flytskjema-overflateintegral}}
     \only<2>{\includegraphics{../img/flytskjema-overflateintegral-0}}
   }
-  $S$ er en parametrisert flate $S \colon \rr(u,v), (u,v) \in R \subseteq \R^2$ med rand $\partial S$. \\ 
+  $S$ er en parametrisert flate $S \colon \rr(u,v), (u,v) \in R \subseteq \R^2$ med rand $\partial S$. \\
   $T$ er volumet med overflate $S$. $B$ er en tiltenkt flate (lokk til $S$).
 \end{frame}
 
@@ -18,19 +18,19 @@
       $.
     \item Dersom $\F(x,y)$ er et vektorfelt blir fluksen ut av oveflaten
       \begin{align*}
-        \iint_S \F \cdot \dS & = 
+        \iint_S \F \cdot \dS & =
         \iint_R \F(\rr(u,v)) \cdot \left( \diffp{\rr}{u}\times\diffp{\rr}{v} \right)\dd(x,y)\,.
       \intertext{Dersom $z = g(x,y)$ så er $\rr(x,y) = (x,y,g(x,y))$, $(x,y) \in R$ og}
-        \iint_S \F \cdot \dS & = 
+        \iint_S \F \cdot \dS & =
         \iint_R\,(F_1, F_2, F_3) \cdot (-g_x,-g_y,1) \dd(x,y).
       \end{align*}
     \item Dersom $g(x,y)$ er et skalarfelt er overflateintegralet gitt som
       \begin{align*}
-        A & = 
+        A & =
         \iint_S\,\norm*{\diffp{\rr}{u}\times\diffp{\rr}{v}}\dd(u,v)\,,
       \intertext{I spesialtilfelle $z = g(x,y)$ er $\rr(u,v) = (x,y,g(x,y))$ og}
       %
-        A & = 
+        A & =
         \iint_T \sqrt{\left( \diffp{f}{x} \right)^2+\left( \diffp{f}{y} \right)^2+1} \dd(x,y).
       \end{align*}
   \end{enumerate}
@@ -40,7 +40,7 @@
   \begin{oppgave}{V2015, Oppgave 5b}
     La $g(x,y) = 1+\frac{y^2}{2x}$ være definert på $g\colon D \to \R$ hvor
     $D = \{(x,y) \in \R^2 \mid 1 \leq x \leq 9, -3 \sqrt{x} \leq y \leq 3 \sqrt{x}\}$
-    bestem arealet av flaten $S = \{(x,y,z)\in \R^3 \mid z = g(z,y), (x,y) \in D\}$.
+    \\ bestem arealet av flaten $S = \{(x,y,z)\in \R^3 \mid z = g(z,y), (x,y) \in D\}$.
   \end{oppgave}
   \begin{enumerate}
     \item Tegn integrasjonsområdet og bestem integrasjonsgrensene

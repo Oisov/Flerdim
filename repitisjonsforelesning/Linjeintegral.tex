@@ -28,15 +28,15 @@
         {\topicref{Greens-teorem}},
         {\topicref{Divergensteoremet}},
         {\topicref{Stokes-teorem}}}]
-      \addplot[fill=black] coordinates {(8,0)};
-      \addplot[fill=black] coordinates {(4,1)};
-      \addplot[fill=black] coordinates {(1,2)};
-      \addplot[fill=black] coordinates {(7,3)};
-      \addplot[fill=black] coordinates {(1,4)};
-      \addplot[fill=black] coordinates {(7,5)};
-      \addplot[fill=black] coordinates {(11,6)};
-      \addplot[fill=black] coordinates {(4,7)};
-      \addplot[fill=red] coordinates {(3,8)};
+      \addplot[fill=gray] coordinates {(8,0)};
+      \addplot[fill=gray] coordinates {(4,1)};
+      \addplot[fill=gray] coordinates {(1,2)};
+      \addplot[fill=gray] coordinates {(7,3)};
+      \addplot[fill=gray] coordinates {(1,4)};
+      \addplot[fill=gray] coordinates {(7,5)};
+      \addplot[fill=gray] coordinates {(11,6)};
+      \addplot[fill=gray] coordinates {(4,7)};
+      \addplot[fill=dgreen] coordinates {(3,8)};
       \addplot[fill=black] coordinates {(8,9)};
       \addplot[fill=black] coordinates {(7,10)};
       \addplot[fill=black] coordinates {(3,11)};
@@ -70,9 +70,9 @@
       \int_C \F \cdot \dr
     \end{equation*}
     %
-    der $C$ er en sirkel med radius $a > 0$? 
+    der $C$ er en sirkel med radius $a > 0$?
   \end{oppgave}
-  
+
   \column{0.38\linewidth} \vspace{0.5cm}
   \only<1>{\includegraphics{../img/vektorfelt-linjeintegral-0}}
   \only<2>{\includegraphics{../img/vektorfelt-linjeintegral-1}}
@@ -91,7 +91,7 @@
     \int_C \F \cdot \dr
     & = \int_0^{2\pi} \F\bigl( \rr(\theta) \bigr) \rr'(\theta) \dT \\} \visible<9->{
       & = \int_0^{2\pi} ax_0 (\cos \theta) + a^2 (\cos \theta)^2 \dT } \visible<10->{
-      = \int_0^{2\pi} \frac{a^2}{2} \dT 
+      = \int_0^{2\pi} \frac{a^2}{2} \dT
       =  \pi a^2 }
     \end{align*}
   \end{frame}

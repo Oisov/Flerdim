@@ -28,11 +28,11 @@
         {\topicref{Greens-teorem}},
         {\topicref{Divergensteoremet}},
         {\topicref{Stokes-teorem}}}]
-      \addplot[fill=black] coordinates {(8,0)};
-      \addplot[fill=black] coordinates {(4,1)};
-      \addplot[fill=black] coordinates {(1,2)};
-      \addplot[fill=black] coordinates {(7,3)};
-      \addplot[fill=red] coordinates {(1,4)};
+      \addplot[fill=gray] coordinates {(8,0)};
+      \addplot[fill=gray] coordinates {(4,1)};
+      \addplot[fill=gray] coordinates {(1,2)};
+      \addplot[fill=gray] coordinates {(7,3)};
+      \addplot[fill=dgreen] coordinates {(1,4)};
       \addplot[fill=black] coordinates {(7,5)};
       \addplot[fill=black] coordinates {(11,6)};
       \addplot[fill=black] coordinates {(4,7)};
@@ -83,12 +83,12 @@
   \textbf{Steg 2:} Sett inn $\X^0 = (x_1^0,x_2^0)=(1,2)$ og $\X =
     (x_1, x_0) = (x,y)$ i formel.
     \begin{align*}
-      T_2(\X) & = 
+      T_2(\X) & =
     \only<1-2>{f(\X^0)
                + \sum_{i=1}^{n} \only<1>{\diffp{f}{{x_i}}}%
                               \only<2>{f_{x_i}}(\X^0)(x_i - x_i^0)%
                + \frac{1}{2} \sum_{i,j=1}^{n} \only<1>{\diffp{f}{{x_i}{x_j}}}%
-                                            \only<2>{f_{{x_i}{x_j}}}(\X^0)(x_i-x_i^0)(x_j - x_j^0)} 
+                                            \only<2>{f_{{x_i}{x_j}}}(\X^0)(x_i-x_i^0)(x_j - x_j^0)}
     \only<3->{\underbrace{f(\X^0)}_{(1)}
       + \underbrace{\sum_{i=1}^{n} f_{{x_i}} (\X^0)(x_i - x_i^0)}_{(2)}
       + \underbrace{\frac{1}{2} \sum_{i,j=1}^{n} f_{{x_i}{x_j}}(\X^0)(x_i-x_i^0)(x_j - x_j^0)}_{(3)}} \\
@@ -101,7 +101,7 @@
       \only<6-10>{(2)
     \left|\,\only<6>{\sum_{i=1}^{n} f_{{x_i}} (\X^0)(x_i - x_i^0)}
          \only<7->{\sum_{i=1}^{2} f_{{x_i}} (1,2)(x_i - x_i^0)} \right.
-      \only<8>{= f_x(1,2) \cdot (x-1) + f_y(1,2) \cdot (y-2)} 
+      \only<8>{= f_x(1,2) \cdot (x-1) + f_y(1,2) \cdot (y-2)}
       \only<9>{= 9 (x-1) + 5(y-2)}
       \only<10>{= 9x + 5y - 19}}
     \only<11-14>{(3)

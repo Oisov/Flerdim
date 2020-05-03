@@ -28,12 +28,12 @@
         {\topicref{Greens-teorem}},
         {\topicref{Divergensteoremet}},
         {\topicref{Stokes-teorem}}}]
-      \addplot[fill=black] coordinates {(8,0)};
-      \addplot[fill=black] coordinates {(4,1)};
-      \addplot[fill=black] coordinates {(1,2)};
-      \addplot[fill=black] coordinates {(7,3)};
-      \addplot[fill=black] coordinates {(1,4)};
-      \addplot[fill=red] coordinates {(7,5)};
+      \addplot[fill=gray] coordinates {(8,0)};
+      \addplot[fill=gray] coordinates {(4,1)};
+      \addplot[fill=gray] coordinates {(1,2)};
+      \addplot[fill=gray] coordinates {(7,3)};
+      \addplot[fill=gray] coordinates {(1,4)};
+      \addplot[fill=dgreen] coordinates {(7,5)};
       \addplot[fill=black] coordinates {(11,6)};
       \addplot[fill=black] coordinates {(4,7)};
       \addplot[fill=black] coordinates {(3,8)};
@@ -53,11 +53,23 @@
   \only<1>{\frametitle{Tangenter}}
   \begin{oppgave}{Matte 2 -- Våren 2010, Oppgave 4b}
     La $f(x,y) = x^3 + y^3 - 3xy$. Skriv opp likningen for tangentplanet til
-    grafen til funksjonen $z = f(x,y)$ i punktet $(2,2,4)$. 
+    grafen til funksjonen $z = f(x,y)$ i punktet $(2,2,4)$.
   \end{oppgave}
   \textbf{Plan:}
   \begin{enumerate}
     \item Finne normalvektor ved hjelp av gradienten $g(x,y,z) = f(x,y) - z$.
+      \only<1>{
+        \begin{intuisjon}
+        If you are standing on a level set and want to walk some small distance
+        $d$ and get as far as possible from the level set, you want to walk along
+        the normal. Otherwise, if the path you take has a tangent component, it
+        will tend to keep you closer to the level set if d is small enough
+        compared to the size of the level set. Furthermore, getting as far as
+        possible from your level set is approximately the same as walking to the
+        highest/lowest level curve in range, with the approximation improving as
+        $d$ shrinks.
+      \end{intuisjon}
+      }
 \visible<2->{
       Gradienten er gitt som
       %

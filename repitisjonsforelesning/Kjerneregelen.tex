@@ -28,10 +28,10 @@
         {\topicref{Greens-teorem}},
         {\topicref{Divergensteoremet}},
         {\topicref{Stokes-teorem}}}]
-      \addplot[fill=black] coordinates {(8,0)};
-      \addplot[fill=black] coordinates {(4,1)};
-      \addplot[fill=black] coordinates {(1,2)};
-      \addplot[fill=red] coordinates {(7,3)};
+      \addplot[fill=gray] coordinates {(8,0)};
+      \addplot[fill=gray] coordinates {(4,1)};
+      \addplot[fill=gray] coordinates {(1,2)};
+      \addplot[fill=dgreen] coordinates {(7,3)};
       \addplot[fill=black] coordinates {(1,4)};
       \addplot[fill=black] coordinates {(7,5)};
       \addplot[fill=black] coordinates {(11,6)};
@@ -62,12 +62,16 @@
   %
   \begin{align*}
     \diffp{f}{x}
-    \only<1>{& = \diffp{}{x} \left( \sin(x^2 - y^2) \right) + \diffp{}{x}\left( \cos(y^2 - y^2) \right)\\}
-    \only<2>{& = \diffp{}{x} \left( x^2 - y^2\right) \cos(x^2+y^2) - \diffp{}{x}\left( y^2 - x^2) \right) \sin(y^2 - x^2)\\}
+    \only<1>{& = \diffp{}{x} \left( \sin(x^2 - y^2) \right) +
+                 \diffp{}{x} \left( \cos(y^2 - y^2) \right)\\}
+    \only<2>{& = \diffp{}{x} \left( x^2 - y^2\right) \cos(x^2+y^2) -
+                 \diffp{}{x} \left( y^2 - x^2\right) \sin(y^2 - x^2)\\}
     \only<3>{& = \phantom{-}2x \cos(x^2+y^2) + 2x \sin(y^2 - x^2)\\}
       \diffp{f}{y}
-    \only<1>{& = \diffp{}{y} \left( \sin(x^2 - y^2) \right) + \diffp{}{y}\left( \cos(y^2 - x^2) \right)\\}
-    \only<2>{& = \diffp{}{y} \left( x^2 - y^2\right) \cos(x^2+y^2) - \diffp{}{y}\left( y^2 - x^2) \right) \sin(y^2 - x^2)\\}
+    \only<1>{& = \diffp{}{y} \left( \sin(x^2 - y^2) \right) +
+                 \diffp{}{y} \left( \cos(y^2 - x^2) \right)\\}
+    \only<2>{& = \diffp{}{y} \left( x^2 - y^2 \right) \cos(x^2+y^2) -
+                 \diffp{}{y} \left( y^2 - x^2 \right) \sin(y^2 - x^2)\\}
     \only<3>{& = -2y \cos(x^2+y^2) - 2y \sin(x^2 - y^2)}
   \end{align*}
   \only<3>{Ved inspeksjon ser vi at $x\tfrac{\partial f}{\partial y}+y\tfrac{\partial

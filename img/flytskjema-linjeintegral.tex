@@ -1,5 +1,5 @@
 \documentclass[tikz]{standalone}
-\usepackage[utf8]{inputenc} 			
+\usepackage[utf8]{inputenc}
 \usepackage[norsk]{babel}
 
 \usepackage{amsmath, amssymb, amsthm, mathtools}   % Mijøer og verktøy for å
@@ -8,7 +8,7 @@
 \DeclareMathOperator{\div}{div}
 \DeclareMathOperator{\curl}{curl}
 \DeclareMathOperator{\grad}{grad}
-    
+
 \newcommand{\vek}[1]{\mathbf{#1}}
 \newcommand*{\dd}{\mathop{}\!{\operator@font d}}
 \newcommand{\F}{\vek{F}}
@@ -46,10 +46,13 @@ height=1cm, text centered, draw=black, fill=green!30]
   \node (dec2) [decision, right of=dec1, xshift=2cm] {$\partial D$ lukket?};
   \node (dec3) [decision, left of=dec1, xshift=-2cm] {$\partial D$ lukket?};
   \node (stop1) [startstop, below of=dec2, yshift=-0.5cm, align=left] {$0$};
-  \node (stop2) [startstop, above of=dec2, yshift=0.5cm, align=left] {$\int_{\partial D} \nabla f \cdot \dr = f(B) - f(A)$};
-  \node (stop3) [startstop, above of=dec3, yshift=0.5cm, align=left] {$\int_a^b \F(\rr(t)) \cdot \rr'(t) \dt$};
+  \node (stop2) [startstop, above of=dec2, yshift=0.5cm, align=left]
+  {$\displaystyle \int_{\partial D} \nabla f \cdot \dr = f(B) - f(A)$};
+  \node (stop3) [startstop, above of=dec3, yshift=0.5cm, align=left]
+  {$\displaystyle \int_a^b \F(\rr(t)) \cdot \rr'(t) \dt$};
   \node (dec4) [decision, below of=dec3, yshift=-0.5cm] {$\F$ i $\R^2$?};
-  \node (stop4) [startstop, below of=dec1, yshift=-0.5cm, align=left] {$\iint_{D} \diffp{{F_2}}{x} - \diffp{{F_1}}{y} \,\mathrm{d}(x,y)$};
+  \node (stop4) [startstop, below of=dec1, yshift=-0.5cm, align=left]
+  {$\displaystyle \iint_{D} \diffp{{F_2}}{x} - \diffp{{F_1}}{y} \,\mathrm{d}(x,y)$};
 
   % \draw [arrow] (dec6) -- node[anchor=west] {Nei} (stop4);
 
@@ -64,7 +67,7 @@ height=1cm, text centered, draw=black, fill=green!30]
   \draw [arrow] (dec3) -- node[anchor=west] {Nei} (stop3);
   \draw [arrow] (dec2) -- node[anchor=west] {Nei} (stop2);
   \draw [arrow] (dec4)  to [bend left=60] node[midway,left] {Nei} (stop3);
-  
+
   % \draw [arrow] (dec2) -- node[anchor=west] {Ja} (stop1);
 \end{tikzpicture}
 

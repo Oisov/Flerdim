@@ -28,24 +28,33 @@
         {\topicref{Greens-teorem}},
         {\topicref{Divergensteoremet}},
         {\topicref{Stokes-teorem}}}]
-      \addplot[fill=black] coordinates {(8,0)};
-      \addplot[fill=black] coordinates {(4,1)};
-      \addplot[fill=black] coordinates {(1,2)};
-      \addplot[fill=black] coordinates {(7,3)};
-      \addplot[fill=black] coordinates {(1,4)};
-      \addplot[fill=black] coordinates {(7,5)};
-      \addplot[fill=black] coordinates {(11,6)};
-      \addplot[fill=black] coordinates {(4,7)};
-      \addplot[fill=black] coordinates {(3,8)};
-      \addplot[fill=black] coordinates {(8,9)};
-      \addplot[fill=black] coordinates {(7,10)};
-      \addplot[fill=black] coordinates {(3,11)};
-      \addplot[fill=black] coordinates {(4,12)};
-      \addplot[fill=red] coordinates {(4,13)};
+      \addplot[fill=gray] coordinates {(8,0)};
+      \addplot[fill=gray] coordinates {(4,1)};
+      \addplot[fill=gray] coordinates {(1,2)};
+      \addplot[fill=gray] coordinates {(7,3)};
+      \addplot[fill=gray] coordinates {(1,4)};
+      \addplot[fill=gray] coordinates {(7,5)};
+      \addplot[fill=gray] coordinates {(11,6)};
+      \addplot[fill=gray] coordinates {(4,7)};
+      \addplot[fill=gray] coordinates {(3,8)};
+      \addplot[fill=gray] coordinates {(8,9)};
+      \addplot[fill=gray] coordinates {(7,10)};
+      \addplot[fill=gray] coordinates {(3,11)};
+      \addplot[fill=gray] coordinates {(4,12)};
+      \addplot[fill=dgreen] coordinates {(4,13)};
       \addplot[fill=black] coordinates {(8,14)};
       \addplot[fill=black] coordinates {(6,15)};
     \end{axis}
   \end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+  \centerline{%
+    \only<1>{\includegraphics[scale=0.95]{../img/flytskjema-linjeintegral-4}}%
+  }
+  $\partial D$ er en kurve slik at $\partial D \colon \rr(t), \ a \leq t \leq b$
+  med $\rr(a)=A$ og $\rr(b) = B$. \\
+  $D$ er området avgrenset av $\partial D$. Dersom $\F$ er konservativ er $\nabla f = \F$.
 \end{frame}
 
 \begin{frame}
@@ -97,8 +106,9 @@
       \int_{\partial D} \F \cdot \dr \visible<2->{ \only<2-3>{\hspace{0.5cm}}\only<4-5>{\hspace{0.25cm}}\quad = \quad \only<4-5>{\hspace{0.25cm}}\only<2-3>{\hspace{0.5cm}}\only<5>{\iint_{D} \left( \diffp{{F_2}}{x} - \diffp{{F_1}}{y} \right) \dd (x,y)}\only<4>{\iint_{D} \2d-curl \F \dd (x,y)}\only<2-3>{\int_{\partial D} \F \cdot \dr}}
       \only<1>{\phantom{\quad = \quad \iint_{D} \2d-curl \F \dd (x,y)}}
     \end{equation*}
+\only<5>{
     Med andre ord kanseleres alle de mikroskopiske sirkulasjonene slik at en
-    står igjen med den makroskopiske sirkulasjonen, altså linjeintegralet.
+  står igjen med den makroskopiske sirkulasjonen, altså linjeintegralet.}
   \end{intuisjon}
 \end{frame}
 

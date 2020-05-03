@@ -28,8 +28,8 @@
         {\topicref{Greens-teorem}},
         {\topicref{Divergensteoremet}},
         {\topicref{Stokes-teorem}}}]
-      \addplot[fill=black] coordinates {(8,0)};
-      \addplot[fill=red] coordinates {(4,1)};
+      \addplot[fill=gray] coordinates {(8,0)};
+      \addplot[fill=dgreen] coordinates {(4,1)};
       \addplot[fill=black] coordinates {(1,2)};
       \addplot[fill=black] coordinates {(7,3)};
       \addplot[fill=black] coordinates {(1,4)};
@@ -51,5 +51,52 @@
 \begin{frame}
   \subsection{Gradient}\label{subsec:Gradient}
   \frametitle{Gradient}
-  Some more text here
+  Gradienten til et skalarfelt er et vektorfelt som i hvert
+  punkt peker i retningen til den største økningen i skalarfeltet.
+  %
+  \begin{align*}
+       \nabla f (x,y)
+    &= \Bigl( \diffp{f}{x}, \ \diffp{f}{y}\Bigl) \\
+       \nabla f (\rho, \theta, z)
+    &= \Bigl( \diffp{f}{\rho},\
+             \frac{1}{\rho}\diffp{f}{\varphi},
+             \diffp{f}{z}
+       \Bigl) \\
+       \nabla f (r, \theta, \phi)
+    &= \Bigl( \diffp{f}{r},\
+             \frac{1}{r}\diffp{f}{\theta},\
+             \frac{1}{r \sin\theta}\diff{f}{\varphi}
+       \Bigl)
+  \end{align*}
+\end{frame}
+
+\begin{frame}
+  \begin{oppgave}{V2016, Oppgave 1}
+Anta at et fjell har form som en elliptisk paraboloide $z = c - ax^2 - by^2$,
+der $a$, $b$ og $c$ er positive konstanter, $x$ og $y$ er øst–vest og nord–sør
+koordinater på kartet, mens $z$ er høyden over havet.
+%
+\begin{enumerate}
+  \item I hvilken retning stiger høyden mest i punktet $(1, 1)$?
+  \item Hvis en klinkekule slippes i $(1, 1, c - a - b)$, i hvilken retning vil den begynne
+    å trille?
+\end{enumerate}
+\end{oppgave}
+\begin{enumerate}
+  \item
+  \visible<2-4>{Høyden til $z$ stiger mest i retningen til gradienten $\nabla z(1,1)$ i
+  $(1,1)$.}
+\visible<3-4>{
+  \begin{equation*}
+    \nabla z(1,1)
+    = (-2ax, -2by)\mid_{(1,1)}
+    \ = 2 (-a, -b)
+  \end{equation*}
+  %
+  Slik at høyden stiger mest i retning $(-a,-b)$.
+}
+\visible<4>{\item Klinkekulen vil trille i den retningen høyden avtar raskest,
+altså i retning $-\nabla z(1,1)$ med andre ord $(a,b)$.}
+\end{enumerate}
+
 \end{frame}
